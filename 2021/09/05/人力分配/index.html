@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#3367D6"/>
+  <link rel="apple-touch-icon" href="/icons-192.png">
+  <link rel="manifest" href="/manifest.json">
+  
+  <meta name="generator" content="Hexo 5.4.0">
+
+  
+
+  
+
+  
+    <meta name="author" content="seanchou">
+  
+
+  
+
+  
+
+  <title>人力分配 | Code Note</title>
+
+  
+
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@1.1.3/index.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs@9.16.2/styles/monokai.css">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="/custom_css_source.css">
+<!-- hexo injector head_end end --></head>
+<body>
+  <div class="root-container">
+    
+<!-- header container -->
+<header class="header-container post">
+  
+    <div class="post-image" style="background-image: url(https://images4.alphacoders.com/641/641968.jpg)"></div>
+  
+
+  <!-- navbar -->
+<nav class="navbar">
+  <div class="navbar-content">
+    <!-- logo -->
+    <div class="navbar-logo">
+      <a href="/">
+        
+          Code Note
+        
+      </a>
+    </div>
+    <!-- link -->
+    <div class="navbar-link">
+      <div class="navbar-btn">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <ul class="navbar-list">
+        
+          <li class="navbar-list-item"><a href="/">首頁</a></li>
+        
+          <li class="navbar-list-item"><a href="/">友聯</a></li>
+        
+          <li class="navbar-list-item"><a href="/about">關於</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    <div class="header-content">
+      <div class="post-text layout-block">
+        <div class="layout-margin">
+          <h1 class="title-wrap">人力分配</h1>
+          <h2 class="title-sub-wrap">
+            <strong>seanchou</strong>
+            <span>发布于</span>
+            <time  class="article-date" datetime="2021-09-04T18:23:00.000Z" itemprop="datePublished">2021-09-05</time>
+          </h2>
+          <ul class="wrap-list dark">
+  
+    <li><a href="/categories/APCS-2020-10/">📒 APCS 2020/10</a></li>
+  
+</ul>
+          <ul class="wrap-list dark">
+  
+    <li><a href="/tags/%E9%81%8B%E7%AE%97%E5%AD%90/">🏷️ 運算子</a></li>
+  
+</ul>
+        </div>
+      </div>
+    </div>
+  
+
+  
+  
+  
+</header>
+
+    <!-- 文章 -->
+
+<!-- 文章内容 -->
+<div class="body-container">
+  <article class="content-container layout-block post-container">
+    <div class="article-info">
+      
+      
+      
+      
+      <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
+        <h5 id="題目敘述"><a href="#題目敘述" class="headerlink" title="題目敘述:"></a><font color=#FFD700>題目敘述:</font></h5><p>有一個公司有 n 個員工，還有兩個工廠。如果工廠一與工廠二分別有 <mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -0.339ex" xmlns="http://www.w3.org/2000/svg" width="2.861ex" height="1.885ex" role="img" focusable="false" viewBox="0 -683 1264.6 833" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-1-TEX-I-1D44B" d="M42 0H40Q26 0 26 11Q26 15 29 27Q33 41 36 43T55 46Q141 49 190 98Q200 108 306 224T411 342Q302 620 297 625Q288 636 234 637H206Q200 643 200 645T202 664Q206 677 212 683H226Q260 681 347 681Q380 681 408 681T453 682T473 682Q490 682 490 671Q490 670 488 658Q484 643 481 640T465 637Q434 634 411 620L488 426L541 485Q646 598 646 610Q646 628 622 635Q617 635 609 637Q594 637 594 648Q594 650 596 664Q600 677 606 683H618Q619 683 643 683T697 681T738 680Q828 680 837 683H845Q852 676 852 672Q850 647 840 637H824Q790 636 763 628T722 611T698 593L687 584Q687 585 592 480L505 384Q505 383 536 304T601 142T638 56Q648 47 699 46Q734 46 734 37Q734 35 732 23Q728 7 725 4T711 1Q708 1 678 1T589 2Q528 2 496 2T461 1Q444 1 444 10Q444 11 446 25Q448 35 450 39T455 44T464 46T480 47T506 54Q523 62 523 64Q522 64 476 181L429 299Q241 95 236 84Q232 76 232 72Q232 53 261 47Q262 47 267 47T273 46Q276 46 277 46T280 45T283 42T284 35Q284 26 282 19Q279 6 276 4T261 1Q258 1 243 1T201 2T142 2Q64 2 42 0Z"></path><path id="MJX-1-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><use data-c="1D44B" xlink:href="#MJX-1-TEX-I-1D44B"></use></g><g data-mml-node="mn" transform="translate(861,-150) scale(0.707)"><use data-c="31" xlink:href="#MJX-1-TEX-N-31"></use></g></g></g></g></svg></mjx-container> 與 <mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -0.339ex" xmlns="http://www.w3.org/2000/svg" width="2.861ex" height="1.885ex" role="img" focusable="false" viewBox="0 -683 1264.6 833" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-1-TEX-I-1D44B" d="M42 0H40Q26 0 26 11Q26 15 29 27Q33 41 36 43T55 46Q141 49 190 98Q200 108 306 224T411 342Q302 620 297 625Q288 636 234 637H206Q200 643 200 645T202 664Q206 677 212 683H226Q260 681 347 681Q380 681 408 681T453 682T473 682Q490 682 490 671Q490 670 488 658Q484 643 481 640T465 637Q434 634 411 620L488 426L541 485Q646 598 646 610Q646 628 622 635Q617 635 609 637Q594 637 594 648Q594 650 596 664Q600 677 606 683H618Q619 683 643 683T697 681T738 680Q828 680 837 683H845Q852 676 852 672Q850 647 840 637H824Q790 636 763 628T722 611T698 593L687 584Q687 585 592 480L505 384Q505 383 536 304T601 142T638 56Q648 47 699 46Q734 46 734 37Q734 35 732 23Q728 7 725 4T711 1Q708 1 678 1T589 2Q528 2 496 2T461 1Q444 1 444 10Q444 11 446 25Q448 35 450 39T455 44T464 46T480 47T506 54Q523 62 523 64Q522 64 476 181L429 299Q241 95 236 84Q232 76 232 72Q232 53 261 47Q262 47 267 47T273 46Q276 46 277 46T280 45T283 42T284 35Q284 26 282 19Q279 6 276 4T261 1Q258 1 243 1T201 2T142 2Q64 2 42 0Z"></path><path id="MJX-1-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><use data-c="1D44B" xlink:href="#MJX-1-TEX-I-1D44B"></use></g><g data-mml-node="mn" transform="translate(861,-150) scale(0.707)"><use data-c="32" xlink:href="#MJX-1-TEX-N-32"></use></g></g></g></g></svg></mjx-container> 個員工，兩個工廠的收益 <mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -0.339ex" xmlns="http://www.w3.org/2000/svg" width="2.302ex" height="1.885ex" role="img" focusable="false" viewBox="0 -683 1017.6 833" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-1-TEX-I-1D44C" d="M66 637Q54 637 49 637T39 638T32 641T30 647T33 664T42 682Q44 683 56 683Q104 680 165 680Q288 680 306 683H316Q322 677 322 674T320 656Q316 643 310 637H298Q242 637 242 624Q242 619 292 477T343 333L346 336Q350 340 358 349T379 373T411 410T454 461Q546 568 561 587T577 618Q577 634 545 637Q528 637 528 647Q528 649 530 661Q533 676 535 679T549 683Q551 683 578 682T657 680Q684 680 713 681T746 682Q763 682 763 673Q763 669 760 657T755 643Q753 637 734 637Q662 632 617 587Q608 578 477 424L348 273L322 169Q295 62 295 57Q295 46 363 46Q379 46 384 45T390 35Q390 33 388 23Q384 6 382 4T366 1Q361 1 324 1T232 2Q170 2 138 2T102 1Q84 1 84 9Q84 14 87 24Q88 27 89 30T90 35T91 39T93 42T96 44T101 45T107 45T116 46T129 46Q168 47 180 50T198 63Q201 68 227 171L252 274L129 623Q128 624 127 625T125 627T122 629T118 631T113 633T105 634T96 635T83 636T66 637Z"></path><path id="MJX-1-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><use data-c="1D44C" xlink:href="#MJX-1-TEX-I-1D44C"></use></g><g data-mml-node="mn" transform="translate(614,-150) scale(0.707)"><use data-c="31" xlink:href="#MJX-1-TEX-N-31"></use></g></g></g></g></svg></mjx-container>,<mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -0.339ex" xmlns="http://www.w3.org/2000/svg" width="2.302ex" height="1.885ex" role="img" focusable="false" viewBox="0 -683 1017.6 833" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-1-TEX-I-1D44C" d="M66 637Q54 637 49 637T39 638T32 641T30 647T33 664T42 682Q44 683 56 683Q104 680 165 680Q288 680 306 683H316Q322 677 322 674T320 656Q316 643 310 637H298Q242 637 242 624Q242 619 292 477T343 333L346 336Q350 340 358 349T379 373T411 410T454 461Q546 568 561 587T577 618Q577 634 545 637Q528 637 528 647Q528 649 530 661Q533 676 535 679T549 683Q551 683 578 682T657 680Q684 680 713 681T746 682Q763 682 763 673Q763 669 760 657T755 643Q753 637 734 637Q662 632 617 587Q608 578 477 424L348 273L322 169Q295 62 295 57Q295 46 363 46Q379 46 384 45T390 35Q390 33 388 23Q384 6 382 4T366 1Q361 1 324 1T232 2Q170 2 138 2T102 1Q84 1 84 9Q84 14 87 24Q88 27 89 30T90 35T91 39T93 42T96 44T101 45T107 45T116 46T129 46Q168 47 180 50T198 63Q201 68 227 171L252 274L129 623Q128 624 127 625T125 627T122 629T118 631T113 633T105 634T96 635T83 636T66 637Z"></path><path id="MJX-1-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><use data-c="1D44C" xlink:href="#MJX-1-TEX-I-1D44C"></use></g><g data-mml-node="mn" transform="translate(614,-150) scale(0.707)"><use data-c="32" xlink:href="#MJX-1-TEX-N-32"></use></g></g></g></g></svg></mjx-container> 分別會是</p>
+<mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -0.559ex" xmlns="http://www.w3.org/2000/svg" width="28.258ex" height="2.559ex" role="img" focusable="false" viewBox="0 -883.9 12490 1130.9" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-1-TEX-I-1D44C" d="M66 637Q54 637 49 637T39 638T32 641T30 647T33 664T42 682Q44 683 56 683Q104 680 165 680Q288 680 306 683H316Q322 677 322 674T320 656Q316 643 310 637H298Q242 637 242 624Q242 619 292 477T343 333L346 336Q350 340 358 349T379 373T411 410T454 461Q546 568 561 587T577 618Q577 634 545 637Q528 637 528 647Q528 649 530 661Q533 676 535 679T549 683Q551 683 578 682T657 680Q684 680 713 681T746 682Q763 682 763 673Q763 669 760 657T755 643Q753 637 734 637Q662 632 617 587Q608 578 477 424L348 273L322 169Q295 62 295 57Q295 46 363 46Q379 46 384 45T390 35Q390 33 388 23Q384 6 382 4T366 1Q361 1 324 1T232 2Q170 2 138 2T102 1Q84 1 84 9Q84 14 87 24Q88 27 89 30T90 35T91 39T93 42T96 44T101 45T107 45T116 46T129 46Q168 47 180 50T198 63Q201 68 227 171L252 274L129 623Q128 624 127 625T125 627T122 629T118 631T113 633T105 634T96 635T83 636T66 637Z"></path><path id="MJX-1-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path id="MJX-1-TEX-N-3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path><path id="MJX-1-TEX-I-1D434" d="M208 74Q208 50 254 46Q272 46 272 35Q272 34 270 22Q267 8 264 4T251 0Q249 0 239 0T205 1T141 2Q70 2 50 0H42Q35 7 35 11Q37 38 48 46H62Q132 49 164 96Q170 102 345 401T523 704Q530 716 547 716H555H572Q578 707 578 706L606 383Q634 60 636 57Q641 46 701 46Q726 46 726 36Q726 34 723 22Q720 7 718 4T704 0Q701 0 690 0T651 1T578 2Q484 2 455 0H443Q437 6 437 9T439 27Q443 40 445 43L449 46H469Q523 49 533 63L521 213H283L249 155Q208 86 208 74ZM516 260Q516 271 504 416T490 562L463 519Q447 492 400 412L310 260L413 259Q516 259 516 260Z"></path><path id="MJX-1-TEX-I-D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"></path><path id="MJX-1-TEX-I-1D44B" d="M42 0H40Q26 0 26 11Q26 15 29 27Q33 41 36 43T55 46Q141 49 190 98Q200 108 306 224T411 342Q302 620 297 625Q288 636 234 637H206Q200 643 200 645T202 664Q206 677 212 683H226Q260 681 347 681Q380 681 408 681T453 682T473 682Q490 682 490 671Q490 670 488 658Q484 643 481 640T465 637Q434 634 411 620L488 426L541 485Q646 598 646 610Q646 628 622 635Q617 635 609 637Q594 637 594 648Q594 650 596 664Q600 677 606 683H618Q619 683 643 683T697 681T738 680Q828 680 837 683H845Q852 676 852 672Q850 647 840 637H824Q790 636 763 628T722 611T698 593L687 584Q687 585 592 480L505 384Q505 383 536 304T601 142T638 56Q648 47 699 46Q734 46 734 37Q734 35 732 23Q728 7 725 4T711 1Q708 1 678 1T589 2Q528 2 496 2T461 1Q444 1 444 10Q444 11 446 25Q448 35 450 39T455 44T464 46T480 47T506 54Q523 62 523 64Q522 64 476 181L429 299Q241 95 236 84Q232 76 232 72Q232 53 261 47Q262 47 267 47T273 46Q276 46 277 46T280 45T283 42T284 35Q284 26 282 19Q279 6 276 4T261 1Q258 1 243 1T201 2T142 2Q64 2 42 0Z"></path><path id="MJX-1-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path><path id="MJX-1-TEX-N-2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path><path id="MJX-1-TEX-I-1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path><path id="MJX-1-TEX-I-1D436" d="M50 252Q50 367 117 473T286 641T490 704Q580 704 633 653Q642 643 648 636T656 626L657 623Q660 623 684 649Q691 655 699 663T715 679T725 690L740 705H746Q760 705 760 698Q760 694 728 561Q692 422 692 421Q690 416 687 415T669 413H653Q647 419 647 422Q647 423 648 429T650 449T651 481Q651 552 619 605T510 659Q484 659 454 652T382 628T299 572T226 479Q194 422 175 346T156 222Q156 108 232 58Q280 24 350 24Q441 24 512 92T606 240Q610 253 612 255T628 257Q648 257 648 248Q648 243 647 239Q618 132 523 55T319 -22Q206 -22 128 53T50 252Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><use data-c="1D44C" xlink:href="#MJX-1-TEX-I-1D44C"></use></g><g data-mml-node="mn" transform="translate(614,-150) scale(0.707)"><use data-c="31" xlink:href="#MJX-1-TEX-N-31"></use></g></g><g data-mml-node="mo" transform="translate(1295.3,0)"><use data-c="3D" xlink:href="#MJX-1-TEX-N-3D"></use></g><g data-mml-node="msub" transform="translate(2351.1,0)"><g data-mml-node="mi"><use data-c="1D434" xlink:href="#MJX-1-TEX-I-1D434"></use></g><g data-mml-node="mn" transform="translate(783,-150) scale(0.707)"><use data-c="31" xlink:href="#MJX-1-TEX-N-31"></use></g></g><g data-mml-node="mi" transform="translate(3537.7,0)"><use data-c="D7" xlink:href="#MJX-1-TEX-I-D7"></use></g><g data-mml-node="msubsup" transform="translate(4315.7,0)"><g data-mml-node="mi"><use data-c="1D44B" xlink:href="#MJX-1-TEX-I-1D44B"></use></g><g data-mml-node="mn" transform="translate(936.2,413) scale(0.707)"><use data-c="32" xlink:href="#MJX-1-TEX-N-32"></use></g><g data-mml-node="mn" transform="translate(861,-247) scale(0.707)"><use data-c="31" xlink:href="#MJX-1-TEX-N-31"></use></g></g><g data-mml-node="mo" transform="translate(5877.6,0)"><use data-c="2B" xlink:href="#MJX-1-TEX-N-2B"></use></g><g data-mml-node="msub" transform="translate(6877.9,0)"><g data-mml-node="mi"><use data-c="1D435" xlink:href="#MJX-1-TEX-I-1D435"></use></g><g data-mml-node="mn" transform="translate(792,-150) scale(0.707)"><use data-c="31" xlink:href="#MJX-1-TEX-N-31"></use></g></g><g data-mml-node="mi" transform="translate(8073.4,0)"><use data-c="D7" xlink:href="#MJX-1-TEX-I-D7"></use></g><g data-mml-node="msub" transform="translate(8851.4,0)"><g data-mml-node="mi"><use data-c="1D44B" xlink:href="#MJX-1-TEX-I-1D44B"></use></g><g data-mml-node="mn" transform="translate(861,-150) scale(0.707)"><use data-c="31" xlink:href="#MJX-1-TEX-N-31"></use></g></g><g data-mml-node="mo" transform="translate(10338.2,0)"><use data-c="2B" xlink:href="#MJX-1-TEX-N-2B"></use></g><g data-mml-node="msub" transform="translate(11338.4,0)"><g data-mml-node="mi"><use data-c="1D436" xlink:href="#MJX-1-TEX-I-1D436"></use></g><g data-mml-node="mn" transform="translate(748,-150) scale(0.707)"><use data-c="31" xlink:href="#MJX-1-TEX-N-31"></use></g></g></g></g></svg></mjx-container><br>
+<mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -0.559ex" xmlns="http://www.w3.org/2000/svg" width="28.258ex" height="2.559ex" role="img" focusable="false" viewBox="0 -883.9 12490 1130.9" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-1-TEX-I-1D44C" d="M66 637Q54 637 49 637T39 638T32 641T30 647T33 664T42 682Q44 683 56 683Q104 680 165 680Q288 680 306 683H316Q322 677 322 674T320 656Q316 643 310 637H298Q242 637 242 624Q242 619 292 477T343 333L346 336Q350 340 358 349T379 373T411 410T454 461Q546 568 561 587T577 618Q577 634 545 637Q528 637 528 647Q528 649 530 661Q533 676 535 679T549 683Q551 683 578 682T657 680Q684 680 713 681T746 682Q763 682 763 673Q763 669 760 657T755 643Q753 637 734 637Q662 632 617 587Q608 578 477 424L348 273L322 169Q295 62 295 57Q295 46 363 46Q379 46 384 45T390 35Q390 33 388 23Q384 6 382 4T366 1Q361 1 324 1T232 2Q170 2 138 2T102 1Q84 1 84 9Q84 14 87 24Q88 27 89 30T90 35T91 39T93 42T96 44T101 45T107 45T116 46T129 46Q168 47 180 50T198 63Q201 68 227 171L252 274L129 623Q128 624 127 625T125 627T122 629T118 631T113 633T105 634T96 635T83 636T66 637Z"></path><path id="MJX-1-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path><path id="MJX-1-TEX-N-3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path><path id="MJX-1-TEX-I-1D434" d="M208 74Q208 50 254 46Q272 46 272 35Q272 34 270 22Q267 8 264 4T251 0Q249 0 239 0T205 1T141 2Q70 2 50 0H42Q35 7 35 11Q37 38 48 46H62Q132 49 164 96Q170 102 345 401T523 704Q530 716 547 716H555H572Q578 707 578 706L606 383Q634 60 636 57Q641 46 701 46Q726 46 726 36Q726 34 723 22Q720 7 718 4T704 0Q701 0 690 0T651 1T578 2Q484 2 455 0H443Q437 6 437 9T439 27Q443 40 445 43L449 46H469Q523 49 533 63L521 213H283L249 155Q208 86 208 74ZM516 260Q516 271 504 416T490 562L463 519Q447 492 400 412L310 260L413 259Q516 259 516 260Z"></path><path id="MJX-1-TEX-I-D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"></path><path id="MJX-1-TEX-I-1D44B" d="M42 0H40Q26 0 26 11Q26 15 29 27Q33 41 36 43T55 46Q141 49 190 98Q200 108 306 224T411 342Q302 620 297 625Q288 636 234 637H206Q200 643 200 645T202 664Q206 677 212 683H226Q260 681 347 681Q380 681 408 681T453 682T473 682Q490 682 490 671Q490 670 488 658Q484 643 481 640T465 637Q434 634 411 620L488 426L541 485Q646 598 646 610Q646 628 622 635Q617 635 609 637Q594 637 594 648Q594 650 596 664Q600 677 606 683H618Q619 683 643 683T697 681T738 680Q828 680 837 683H845Q852 676 852 672Q850 647 840 637H824Q790 636 763 628T722 611T698 593L687 584Q687 585 592 480L505 384Q505 383 536 304T601 142T638 56Q648 47 699 46Q734 46 734 37Q734 35 732 23Q728 7 725 4T711 1Q708 1 678 1T589 2Q528 2 496 2T461 1Q444 1 444 10Q444 11 446 25Q448 35 450 39T455 44T464 46T480 47T506 54Q523 62 523 64Q522 64 476 181L429 299Q241 95 236 84Q232 76 232 72Q232 53 261 47Q262 47 267 47T273 46Q276 46 277 46T280 45T283 42T284 35Q284 26 282 19Q279 6 276 4T261 1Q258 1 243 1T201 2T142 2Q64 2 42 0Z"></path><path id="MJX-1-TEX-N-2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path><path id="MJX-1-TEX-I-1D435" d="M231 637Q204 637 199 638T194 649Q194 676 205 682Q206 683 335 683Q594 683 608 681Q671 671 713 636T756 544Q756 480 698 429T565 360L555 357Q619 348 660 311T702 219Q702 146 630 78T453 1Q446 0 242 0Q42 0 39 2Q35 5 35 10Q35 17 37 24Q42 43 47 45Q51 46 62 46H68Q95 46 128 49Q142 52 147 61Q150 65 219 339T288 628Q288 635 231 637ZM649 544Q649 574 634 600T585 634Q578 636 493 637Q473 637 451 637T416 636H403Q388 635 384 626Q382 622 352 506Q352 503 351 500L320 374H401Q482 374 494 376Q554 386 601 434T649 544ZM595 229Q595 273 572 302T512 336Q506 337 429 337Q311 337 310 336Q310 334 293 263T258 122L240 52Q240 48 252 48T333 46Q422 46 429 47Q491 54 543 105T595 229Z"></path><path id="MJX-1-TEX-I-1D436" d="M50 252Q50 367 117 473T286 641T490 704Q580 704 633 653Q642 643 648 636T656 626L657 623Q660 623 684 649Q691 655 699 663T715 679T725 690L740 705H746Q760 705 760 698Q760 694 728 561Q692 422 692 421Q690 416 687 415T669 413H653Q647 419 647 422Q647 423 648 429T650 449T651 481Q651 552 619 605T510 659Q484 659 454 652T382 628T299 572T226 479Q194 422 175 346T156 222Q156 108 232 58Q280 24 350 24Q441 24 512 92T606 240Q610 253 612 255T628 257Q648 257 648 248Q648 243 647 239Q618 132 523 55T319 -22Q206 -22 128 53T50 252Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><use data-c="1D44C" xlink:href="#MJX-1-TEX-I-1D44C"></use></g><g data-mml-node="mn" transform="translate(614,-150) scale(0.707)"><use data-c="32" xlink:href="#MJX-1-TEX-N-32"></use></g></g><g data-mml-node="mo" transform="translate(1295.3,0)"><use data-c="3D" xlink:href="#MJX-1-TEX-N-3D"></use></g><g data-mml-node="msub" transform="translate(2351.1,0)"><g data-mml-node="mi"><use data-c="1D434" xlink:href="#MJX-1-TEX-I-1D434"></use></g><g data-mml-node="mn" transform="translate(783,-150) scale(0.707)"><use data-c="32" xlink:href="#MJX-1-TEX-N-32"></use></g></g><g data-mml-node="mi" transform="translate(3537.7,0)"><use data-c="D7" xlink:href="#MJX-1-TEX-I-D7"></use></g><g data-mml-node="msubsup" transform="translate(4315.7,0)"><g data-mml-node="mi"><use data-c="1D44B" xlink:href="#MJX-1-TEX-I-1D44B"></use></g><g data-mml-node="mn" transform="translate(936.2,413) scale(0.707)"><use data-c="32" xlink:href="#MJX-1-TEX-N-32"></use></g><g data-mml-node="mn" transform="translate(861,-247) scale(0.707)"><use data-c="32" xlink:href="#MJX-1-TEX-N-32"></use></g></g><g data-mml-node="mo" transform="translate(5877.6,0)"><use data-c="2B" xlink:href="#MJX-1-TEX-N-2B"></use></g><g data-mml-node="msub" transform="translate(6877.9,0)"><g data-mml-node="mi"><use data-c="1D435" xlink:href="#MJX-1-TEX-I-1D435"></use></g><g data-mml-node="mn" transform="translate(792,-150) scale(0.707)"><use data-c="32" xlink:href="#MJX-1-TEX-N-32"></use></g></g><g data-mml-node="mi" transform="translate(8073.4,0)"><use data-c="D7" xlink:href="#MJX-1-TEX-I-D7"></use></g><g data-mml-node="msub" transform="translate(8851.4,0)"><g data-mml-node="mi"><use data-c="1D44B" xlink:href="#MJX-1-TEX-I-1D44B"></use></g><g data-mml-node="mn" transform="translate(861,-150) scale(0.707)"><use data-c="32" xlink:href="#MJX-1-TEX-N-32"></use></g></g><g data-mml-node="mo" transform="translate(10338.2,0)"><use data-c="2B" xlink:href="#MJX-1-TEX-N-2B"></use></g><g data-mml-node="msub" transform="translate(11338.4,0)"><g data-mml-node="mi"><use data-c="1D436" xlink:href="#MJX-1-TEX-I-1D436"></use></g><g data-mml-node="mn" transform="translate(748,-150) scale(0.707)"><use data-c="32" xlink:href="#MJX-1-TEX-N-32"></use></g></g></g></g></svg></mjx-container>
+<p>請你考慮所有分配員工的方式，找出收益最大的組合，輸出最大收益。</p>
+<h5 id="code"><a href="#code" class="headerlink" title="code:"></a><font color=#008000>code:</font></h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-keyword">int</span> A1,A2,B1,B2,C1,C2,n;<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">Y1</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x)</span></span>&#123;<br>    <span class="hljs-keyword">return</span> (A1*x*x)+(B1*x)+C1;<br>&#125;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">Y2</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x)</span></span>&#123;<br>    <span class="hljs-keyword">return</span> (A2*x*x)+(B2*x)+C2;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    ios::<span class="hljs-built_in">sync_with_stdio</span>(<span class="hljs-literal">false</span>);cin.<span class="hljs-built_in">tie</span>(<span class="hljs-number">0</span>);<br>    <span class="hljs-keyword">int</span> max_num=<span class="hljs-number">-30000</span>;<br>    cin &gt;&gt; A1 &gt;&gt; B1 &gt;&gt; C1 &gt;&gt; A2 &gt;&gt; B2 &gt;&gt; C2 &gt;&gt; n;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;=n;i++)&#123;<br>        max_num=<span class="hljs-built_in">max</span>(max_num,<span class="hljs-built_in">Y1</span>(i)+<span class="hljs-built_in">Y2</span>(n-i));<br>    &#125;<br>    cout &lt;&lt; max_num ;<br>&#125;<br></code></pre></td></tr></table></figure>
+      </section>
+
+      
+      
+        <nav class="article-nav">
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+    <div class="card-text">
+      
+        <a href="/2021/09/05/%E6%89%BE%E9%87%91%E5%B9%A3/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">找金幣</h2>
+        </a>
+      
+      <div class="card-text--row">Newer</div>
+    </div>
+  </article>
+</div>
+          
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+    <div class="card-text">
+      
+        <a href="/2021/09/05/%E5%85%A9%E5%85%89%E6%B3%95%E5%B8%AB%E5%8D%A0%E5%8D%9C%E8%A1%93/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">兩光法師占卜術</h2>
+        </a>
+      
+      <div class="card-text--row">Older</div>
+    </div>
+  </article>
+</div>
+          
+        </nav>
+      
+
+      <section class="page-message-container layout-padding">
+        
+
+
+  
+  
+
+  
+  
+
+
+      </section>
+    </div>
+    <div class="widget-info">
+      <section class="widget-author widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-body">
+    
+      <img src="https://scontent.ftpe7-3.fna.fbcdn.net/v/t1.6435-9/240589129_4244846152290179_7680250779065951282_n.jpg?_nc_cat=103&amp;ccb=1-5&amp;_nc_sid=730e14&amp;_nc_ohc=EF5xW36eoN8AX_tWXfL&amp;_nc_ht=scontent.ftpe7-3.fna&amp;oh=34a7d57b5fb0cb73aac5bde3a3f88b67&amp;oe=6156BC0C" class="soft-size--round soft-style--box" alt="seanchou">
+    
+    
+      <h2>seanchou</h2>
+    
+    
+      <p>還在睡</p>
+    
+
+    <div class="count-box">
+      <div class="count-box--item">
+        <svg class="icon icon-article" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M240.51564747 647.74217627h196.07203239c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806V165.10332731c0-33.18142087-30.16492806-60.32985613-60.32985612-60.32985611H245.04038668C225.43318342 104.7734712 210.35071939 119.85593522 210.35071939 139.46313845V617.57724821c0 16.59071043 13.57421762 30.16492806 30.16492808 30.16492806z m663.62841731-452.47392089v482.63884894c0 33.18142087-27.14843525 60.32985613-60.32985612 60.32985613H180.18579134c-33.18142087 0-60.32985613-27.14843525-60.32985612-60.32985613V195.26825538c-49.77213131 0-90.49478418 40.72265287-90.49478417 90.49478417v452.4739209c0 49.77213131 40.72265287 90.49478418 90.49478417 90.49478417h286.56681657c16.59071043 0 30.16492806 13.57421762 30.16492807 30.16492807s13.57421762 30.16492806 30.16492805 30.16492806h90.49478418c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806s13.57421762-30.16492806 30.16492807-30.16492807h286.56681657c49.77213131 0 90.49478418-40.72265287 90.49478417-90.49478417V285.76303955c0-49.77213131-40.72265287-90.49478418-90.49478417-90.49478417zM587.41232014 647.74217627h191.54729318c19.60720323 0 34.68966726-15.08246403 34.68966729-34.68966727V134.93839925c0-16.59071043-13.57421762-30.16492806-30.16492808-30.16492805H617.57724821c-30.16492806 0-60.32985613 27.14843525-60.32985612 60.32985611v452.4739209c0 16.59071043 13.57421762 30.16492806 30.16492805 30.16492806z" fill="currentColor"></path>
+</svg>
+        <span>5</span>
+      </div>
+      <div class="count-box--item">
+        <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M900.3614811 257.09082106h-339.81629553l-67.96326003-101.9448889c-19.41807444-29.12711113-48.54518557-43.69066667-82.52681443-43.69066667H123.6385189c-53.39970333 0-97.09036999 43.69066667-97.09037113 97.09036999v582.54222222c0 53.39970333 43.69066667 97.09036999 97.09037113 97.09037002h776.7229622c53.39970333 0 97.09036999-43.69066667 97.09037113-97.09037002V354.18119104c0-53.39970333-43.69066667-97.09036999-97.09037113-97.09036998z m-97.09036999 242.72592554H220.72888889c-24.27259221 0-48.54518557-24.27259221-48.54518556-48.54518556s24.27259221-48.54518557 48.54518556-48.54518444h582.54222222c24.27259221 0 48.54518557 24.27259221 48.54518556 48.54518444s-24.27259221 48.54518557-48.54518556 48.54518556z" fill="currentColor"></path>
+</svg>
+        3
+      </div>
+      <div class="count-box--item">
+        <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
+</svg>
+        4
+      </div>
+    </div>
+  </div>
+</section>
+
+      
+
+      
+
+      <section class="widget-categorys widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M900.3614811 257.09082106h-339.81629553l-67.96326003-101.9448889c-19.41807444-29.12711113-48.54518557-43.69066667-82.52681443-43.69066667H123.6385189c-53.39970333 0-97.09036999 43.69066667-97.09037113 97.09036999v582.54222222c0 53.39970333 43.69066667 97.09036999 97.09037113 97.09037002h776.7229622c53.39970333 0 97.09036999-43.69066667 97.09037113-97.09037002V354.18119104c0-53.39970333-43.69066667-97.09036999-97.09037113-97.09036998z m-97.09036999 242.72592554H220.72888889c-24.27259221 0-48.54518557-24.27259221-48.54518556-48.54518556s24.27259221-48.54518557 48.54518556-48.54518444h582.54222222c24.27259221 0 48.54518557 24.27259221 48.54518556 48.54518444s-24.27259221 48.54518557-48.54518556 48.54518556z" fill="currentColor"></path>
+</svg>
+    <span>CATEGORYS</span>
+  </div>
+  <div class="widget-body">
+    <ul class="categorys-list">
+      
+        <li class="categorys-list-item">
+          <a href="/categories/ZeroJudge/">
+            ZeroJudge (3)
+          </a>
+        </li>
+      
+        <li class="categorys-list-item">
+          <a href="/categories/APCS-2020-10/">
+            APCS 2020/10 (1)
+          </a>
+        </li>
+      
+        <li class="categorys-list-item">
+          <a href="/categories/AA/">
+            AA (1)
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+</section>
+
+      <section class="widget-tags widget-item  layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
+</svg>
+    <span>TAGS</span>
+  </div>
+  <div class="widget-body">
+    <div class="tags-cloud">
+      <a href="/tags/%E5%A4%9A%E7%B6%AD%E9%99%A3%E5%88%97/" style="font-size: 10px;" class="tags-cloud-0">多維陣列</a> <a href="/tags/%E6%A2%9D%E4%BB%B6%E5%88%A4%E6%96%B7/" style="font-size: 10px;" class="tags-cloud-0">條件判斷</a> <a href="/tags/%E8%BC%B8%E5%85%A5%E8%BC%B8%E5%87%BA/" style="font-size: 10px;" class="tags-cloud-0">輸入輸出</a> <a href="/tags/%E9%81%8B%E7%AE%97%E5%AD%90/" style="font-size: 20px;" class="tags-cloud-10">運算子</a>
+    </div>
+  </div>
+</section>
+    </div>
+  </article>
+</div>
+
+    <!-- footer container -->
+<footer id="footer" class="footer">
+  <div class="footer-container">
+    
+    <div class="social-icons">
+      
+        
+          <a href="https://www.instagram.com/chisc_seanchou/" class="soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
+            <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">  <image id="image0" width="32" height="32" x="0" y="0"
+    href="data:image/png;base64,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
+KzAwOjAw7EGpggAAAABJRU5ErkJggg==" />
+</svg>
+
+          </a>
+        
+      
+        
+      
+        
+          <a href="https://www.facebook.com/chou.sean.771/" class="soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
+            <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">  <image id="image0" width="32" height="32" x="0" y="0"
+    href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
+AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABGlBMVEUAAAB5kLVFcaU9a6M7
+aaE8aqJEb6Rti7FWe6koXZxMdaeqqqpfgqpQd6nV1dU3ZqAsXp2ZqruAlblYfKlihKxMdqVhg61M
+dqdihK94k7NWeqm5ubkzZJ8pXZ2Jnb5XfKpKcqeqqqpPdqf///////+fttRCbqSktrZmh65AbaQ5
+aKE2ZqDQ2eb4+Pj5+fmkudI5aKI+a6NafarMzMz///////8jWZslWpskWZs+badQe69Peq9HdKs1
+ZqN5msLi6PH///+ZsdBOeq7+/v6ettPn7fTAz+K9zeGpvdfG1OXX4e0pXZ7R3OqjudWfttNYgbOc
+tNLq7/XU3ut2l8CDocakutWHpchrj7xgh7evwtru8vfc5e9CcKkkWpsYb6mGAAAANnRSTlMAN57Q
+3NSqS4P9pQZmjwbo+x46ZVOAVIBTQGsL8P0ne6UDov78/cEOVb7w+PP08/XzymwFAgEjf245AAAA
+AWJLR0QjKmJsOgAAAAd0SU1FB+UJBAgbMxDaLoMAAADiSURBVDjLY2CgE2BkYmZBA6xs7Ah5Dk4z
+LMCcixsqz2Nuhh3wQuT5+NElLCytrG1szcwEBMEKhNDl7ewdgMAeyBIGKxBBk3d0cIApEAUrEEOV
+d3JGKBDHpsAFJOvq5u6BS4EnUN7LG8LGqsAHqMDXjIACP7IV+AcEBAQCFQQB6WBsCkIcECCUkIIw
+QgrCsSmIiIyMjAJKRgPpGNp4k0wFEoQUSOJWIAVWIC2DS4GsHCTVyuNSoABN9opKscgKlJVVVMEs
+NXV4ztHQ1NKGAR1dPV19bW0DQyNjlNxnggZMic22AB0GnCR95Z2cAAAAJXRFWHRkYXRlOmNyZWF0
+ZQAyMDIxLTA5LTA0VDA4OjI3OjUxKzAwOjAwH+KnbQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMS0w
+OS0wNFQwODoyNzo1MSswMDowMG6/H9EAAAAASUVORK5CYII=" />
+</svg>
+
+          </a>
+        
+      
+        
+      
+        
+          <a href="https://github.com/seanchou3213" class="soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
+            <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">  <image id="image0" width="32" height="32" x="0" y="0"
+    href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
+AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABWVBMVEUAAAARESIUGRwUGR0U
+GR4TGR0UGR4UGR8UGxsTGB0UGR4UGR4aGhoUGB0UGB0VFRwTGR4PGh8UGR0UGh8TGB4UGR4UGB4U
+GR4UGR0UGR4AAAAUGh0TGR4UGR4UGR4UGB4UGR4UGR4UGB4SFx0AAAASGR0VFRoVFRwQGSEUFB0W
+FhsUFB8UGhwSGR0NGhoXFxcUGR0UGR4TGRwUGR4UGR4TGR4UGR4UGB4TGB4QECAAAAASGBsUGBwU
+GR0TGB4TGB0SGB4TGR0AAAATGBwTGR4TGR0UGB4TGR0TGB0AICAAACsVGh8UGBwUGR4TGR4RGBwU
+GR4VGR4AAAATGR4TGB4UGB4SGhoTGR8TFx8UGR4UGB0UGR4AACQRGR0TGB0QGh8UGR0VFx0VGR0U
+GR4TGR4UFBscHBwUGB0UGR4TGB0UGR4AAAAUGR4TGR4TGhoSEiQQGRkUGR7///8t7TiXAAAAcXRS
+TlMAD1uczez+Wyae9vcKjfsl1DLrMtOk5eilygNZ3+7MvMnr5mIFRzEkHxovGVpGFAvZZ1L88uDB
+59QQBFQ/wKxqVnsCbPmE3Xo1CAYxddbtSc66Aav68h0pQpuCmgc9/THqYnoz1SYJjI+d+Ab1oSgO
+HyPoAuwAAAABYktHRHI2Dg1YAAAAB3RJTUUH5QkECB8SON/72QAAAZFJREFUOMttU1dDwjAQTumA
+QgsIDkQFRdwLwYkDFRw4UBFx773J/3+xl4RQ2t7L5e77crkVhLgILlGSFUWWRLeA7OJRvZiLT/VY
+YE334ybx65oZDwSxTYKBBt4Swg4SCvP7jrjBYDE0iN/a1m7GOiKd8ArNQwePC0W7unFPLB7v7cOJ
+/iQaAK9O6iP5D0KoIRpyGNowQmqBalUSc9TalzHiVo3+0f6MWwkTxO0VkIscEpNWwlQK09xEoqft
+vU8TQEQSqIzDdJIzgEhIBjXrMD0EncAyUkClnAhzgCiUMO9EWKAE8oSyaMezpP4QTRIv2QnLmCZJ
+y1yxE1ZZmW46vpwVX8Osw4KPHDLrWTO8kS/UWw3D2kzHMN7a3ilSdHdv/4DthUrHXTrUjsA8LhPC
+Cd+bioctzGn1rGTY5zRCmBN0vnIXqHp5lbumhChfbI0vbeHGnOJt89IidHePK5H8w2OZ2QrFnxpX
+2MepV0qM5xdz0Ne3iuErNgj+96avB0E+vJ9f7Pzt+/l1GO9frX6qmYb7D4/KrqXDWtMOAAAAJXRF
+WHRkYXRlOmNyZWF0ZQAyMDIxLTA5LTA0VDA4OjMxOjE4KzAwOjAwwqBDwwAAACV0RVh0ZGF0ZTpt
+b2RpZnkAMjAyMS0wOS0wNFQwODozMToxOCswMDowMLP9+38AAAAASUVORK5CYII=" />
+</svg>
+
+          </a>
+        
+      
+    </div>
+     
+    <p>&copy; 2021 <a href="/" target="_blank">seanchou</a></p>
+
+    
+
+    <p>Powered by <a href="https://hexo.io" target="_blank" rel="noopener noreferrer">Hexo</a> Theme - <a href="https://github.com/miiiku/flex-block" target="_blank" rel="noopener noreferrer author">flex-block</a></p>
+
+    <p>
+      <a href="javascript:;" id="theme-light">🌞 浅色</a>
+      <a href="javascript:;" id="theme-dark">🌛 深色</a>
+      <a href="javascript:;" id="theme-auto">🤖️ 自动</a>
+    </p>
+  </div>
+</footer>
+  </div>
+
+  <div class="back-to-top-fixed soft-size--round soft-style--box">
+    <svg class="icon icon-back-to-top" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <path d="M725.333333 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8l-213.333333-213.333333c-17.066667-17.066667-17.066667-42.666667 0-59.733333s42.666667-17.066667 59.733333 0l213.333333 213.333333c17.066667 17.066667 17.066667 42.666667 0 59.733333C746.666667 422.4 738.133333 426.666667 725.333333 426.666667z"></path>
+      <path d="M298.666667 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8-17.066667-17.066667-17.066667-42.666667 0-59.733333l213.333333-213.333333c17.066667-17.066667 42.666667-17.066667 59.733333 0s17.066667 42.666667 0 59.733333l-213.333333 213.333333C320 422.4 311.466667 426.666667 298.666667 426.666667z"></path>
+      <path d="M512 896c-25.6 0-42.666667-17.066667-42.666667-42.666667L469.333333 170.666667c0-25.6 17.066667-42.666667 42.666667-42.666667s42.666667 17.066667 42.666667 42.666667l0 682.666667C554.666667 878.933333 537.6 896 512 896z"></path>
+    </svg>
+  </div>
+
+  
+  <!-- aplayer -->
+
+
+<!-- dplayer -->
+
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+  
+  <!-- 尾部用户自定义相关内容 -->
+</body>
+</html>
