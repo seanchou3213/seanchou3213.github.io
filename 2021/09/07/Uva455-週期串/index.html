@@ -22,7 +22,7 @@
 
   
 
-  <title>簡易加法 | Code Note</title>
+  <title>Uva455 週期串 | Code Note</title>
 
   
 
@@ -47,7 +47,7 @@
 <!-- header container -->
 <header class="header-container post">
   
-    <div class="post-image" style="background-image: url(https://scontent.ftpe7-1.fna.fbcdn.net/v/t1.6435-9/p960x960/240755104_4247552452019549_7837659179061591451_n.jpg?_nc_cat=106&amp;ccb=1-5&amp;_nc_sid=730e14&amp;_nc_ohc=p1E6KnA7Uq0AX_71btC&amp;_nc_ht=scontent.ftpe7-1.fna&amp;oh=81b30098d2de6968427bb03e7bf6e44c&amp;oe=615931B2)"></div>
+    <div class="post-image" style="background-image: url(https://images4.alphacoders.com/641/641968.jpg)"></div>
   
 
   <!-- navbar -->
@@ -98,20 +98,20 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">簡易加法</h1>
+          <h1 class="title-wrap">Uva455 週期串</h1>
           <h2 class="title-sub-wrap">
             <strong>seanchou</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2021-09-04T18:15:00.000Z" itemprop="datePublished">2021-09-05</time>
+            <time  class="article-date" datetime="2021-09-06T16:59:00.000Z" itemprop="datePublished">2021-09-07</time>
           </h2>
           <ul class="wrap-list dark">
   
-    <li><a href="/categories/ZeroJudge/">📒 ZeroJudge</a></li>
+    <li><a href="/categories/Uva/">📒 Uva</a></li>
   
 </ul>
           <ul class="wrap-list dark">
   
-    <li><a href="/tags/%E9%81%8B%E7%AE%97%E5%AD%90/">🏷️ 運算子</a></li>
+    <li><a href="/tags/%E5%AD%97%E4%B8%B2%E8%99%95%E7%90%86/">🏷️ 字串處理</a></li>
   
 </ul>
         </div>
@@ -135,40 +135,23 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <h5 id="題目敘述"><a href="#題目敘述" class="headerlink" title="題目敘述:"></a><font color=#FFD700>題目敘述:</font></h5><p>請寫一個程式，讀入兩個數字，並求出它們的和。</p>
-<h5 id="code"><a href="#code" class="headerlink" title="code:"></a><font color=#008000>code:</font></h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-keyword">int</span> a,b,ans;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d%d&quot;</span>,&amp;a,&amp;b);<br>    ans=a+b;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d&quot;</span>,ans);<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+        <h5 id="題目敘述"><a href="#題目敘述" class="headerlink" title="題目敘述:"></a><font color=#FFD700>題目敘述:</font></h5><p>   給一個字串，求週期重複子字串的最小長度。以範例測資HoHoHo，它的Ho子字串可週期重複在第1、第3、第5的位置，而這子字串長度為2。最長的子字串是HoHoHo本身，長度為6，所以輸出答案為2。</p>
+<p>另一個題目說明的abcabcabcabc，可週期重複的子字串為abc、abcabc與abcabcabcabc三種，最小長度為abc = 3。</p>
+<h5 id="code"><a href="#code" class="headerlink" title="code:"></a><font color=#008000>code:</font></h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br> <br><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> int long long int</span><br><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> SIZE=<span class="hljs-number">100001</span>;<br><br><span class="hljs-keyword">int</span> m[<span class="hljs-number">10</span>];<br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">solve</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-keyword">int</span> len;<br>    string s;<br>    cin &gt;&gt; s;<br>    cin.<span class="hljs-built_in">get</span>();<br>    len=s.<span class="hljs-built_in">size</span>();<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;=len;i++)&#123;<br>        string a;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=<span class="hljs-number">0</span>;j&lt;i;j++)&#123;<br>            a+=s[j];<br>        &#125;<br>        <span class="hljs-keyword">if</span>(len%i==<span class="hljs-number">0</span>)&#123;<br>            string re;<br>            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=<span class="hljs-number">0</span>;j&lt;(len/i);j++)&#123;<br>                re+=a;<br>            &#125;<br>            <span class="hljs-keyword">if</span>(re==s)&#123;<br>                cout &lt;&lt; i &lt;&lt; <span class="hljs-string">&#x27;\n&#x27;</span>;<br>                <span class="hljs-keyword">return</span>;<br>            &#125;<br>        &#125;<br>        <span class="hljs-comment">//cout &lt;&lt; a &lt;&lt; &#x27;\n&#x27;;</span><br>    &#125;<br><br>&#125;<br> <br><span class="hljs-function"><span class="hljs-keyword">signed</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    ios::<span class="hljs-built_in">sync_with_stdio</span>(<span class="hljs-literal">false</span>);cin.<span class="hljs-built_in">tie</span>(<span class="hljs-number">0</span>);<br>    <span class="hljs-keyword">int</span> tt;<br>    cin &gt;&gt; tt;<br>    <span class="hljs-keyword">while</span>(tt--)&#123;<br>        <span class="hljs-built_in">solve</span>();<br>        <span class="hljs-keyword">if</span>(tt)cout &lt;&lt;<span class="hljs-string">&#x27;\n&#x27;</span>;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
       </section>
 
       
       
         <nav class="article-nav">
           
-            <div class="article-nav-item layout-padding">
-  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
-    
-      <div class="card-cover" background-image-lazy data-img="https://scontent.ftpe7-1.fna.fbcdn.net/v/t1.6435-9/p960x960/240755104_4247552452019549_7837659179061591451_n.jpg?_nc_cat=106&amp;ccb=1-5&amp;_nc_sid=730e14&amp;_nc_ohc=p1E6KnA7Uq0AX_71btC&amp;_nc_ht=scontent.ftpe7-1.fna&amp;oh=81b30098d2de6968427bb03e7bf6e44c&amp;oe=615931B2"></div>
-    
-    <div class="card-text">
-      
-        <a href="/2021/09/05/%E5%85%A9%E5%85%89%E6%B3%95%E5%B8%AB%E5%8D%A0%E5%8D%9C%E8%A1%93/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">兩光法師占卜術</h2>
-        </a>
-      
-      <div class="card-text--row">Newer</div>
-    </div>
-  </article>
-</div>
-          
           
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
-      <div class="card-cover" background-image-lazy data-img="https://scontent.ftpe7-1.fna.fbcdn.net/v/t1.6435-9/p960x960/240755104_4247552452019549_7837659179061591451_n.jpg?_nc_cat=106&amp;ccb=1-5&amp;_nc_sid=730e14&amp;_nc_ohc=p1E6KnA7Uq0AX_71btC&amp;_nc_ht=scontent.ftpe7-1.fna&amp;oh=81b30098d2de6968427bb03e7bf6e44c&amp;oe=615931B2"></div>
-    
     <div class="card-text">
       
-        <a href="/2021/09/05/%E5%93%88%E5%9B%89/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">哈囉</h2>
+        <a href="/2021/09/07/Uva-1225-%E6%95%B8%E6%95%B8%E5%AD%97/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">Uva 1225 數數字</h2>
         </a>
       
       <div class="card-text--row">Older</div>
