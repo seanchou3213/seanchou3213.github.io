@@ -22,7 +22,7 @@
 
   
 
-  <title>about | Code Note</title>
+  <title>因數分解 | Code Note</title>
 
   
 
@@ -45,9 +45,9 @@
   <div class="root-container">
     
 <!-- header container -->
-<header class="header-container">
+<header class="header-container post">
   
-    <div class="post-image" style="background-image: url(https://images4.alphacoders.com/641/641968.jpg)"></div>
+    <div class="post-image" style="background-image: url(https://scontent.ftpe7-1.fna.fbcdn.net/v/t1.6435-9/p960x960/240755104_4247552452019549_7837659179061591451_n.jpg?_nc_cat=106&amp;ccb=1-5&amp;_nc_sid=730e14&amp;_nc_ohc=p1E6KnA7Uq0AX_71btC&amp;_nc_ht=scontent.ftpe7-1.fna&amp;oh=81b30098d2de6968427bb03e7bf6e44c&amp;oe=615931B2)"></div>
   
 
   <!-- navbar -->
@@ -95,37 +95,104 @@
 
   
   
-
-  
-  
     <div class="header-content">
-      <div class="post-text layout-block layout-padding">
-        <h1 class="title-wrap">about</h1>
-        
+      <div class="post-text layout-block">
+        <div class="layout-margin">
+          <h1 class="title-wrap">因數分解</h1>
+          <h2 class="title-sub-wrap">
+            <strong>seanchou</strong>
+            <span>发布于</span>
+            <time  class="article-date" datetime="2021-09-07T15:37:00.000Z" itemprop="datePublished">2021-09-07</time>
+          </h2>
+          <ul class="wrap-list dark">
+  
+    <li><a href="/categories/ZeroJudge/">📒 ZeroJudge</a></li>
+  
+</ul>
+          <ul class="wrap-list dark">
+  
+    <li><a href="/tags/math/">🏷️ math</a></li>
+  
+</ul>
+        </div>
       </div>
     </div>
+  
+
+  
   
   
 </header>
 
-    <!-- 分页(其他自定义页面) -->
+    <!-- 文章 -->
 
-<!-- 自定义页面 -->
-
+<!-- 文章内容 -->
 <div class="body-container">
   <article class="content-container layout-block post-container">
     <div class="article-info">
       
+      
+      
+      
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <h1 id="關於我"><a href="#關於我" class="headerlink" title="關於我:"></a>關於我:</h1><p>hello world! I’m seanchou</p>
-
+        <h5 id="題目敘述"><a href="#題目敘述" class="headerlink" title="題目敘述:"></a><font color=#FFD700>題目敘述:</font></h5><p>各位在國小時都學過因數分解，都瞭解怎麼樣用紙筆計算出結果，現在由你來敎電腦做因數分解。</p>
+<p>因數分解就是把一個數字，切分為數個質數的乘積，如 12=2^2 * 3</p>
+<p>其中, 次方的符號以 ^ 來表示</p>
+<h5 id="code"><a href="#code" class="headerlink" title="code:"></a><font color=#008000>code:</font></h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-keyword">int</span> num,cnt;<br>    <span class="hljs-keyword">int</span> tmp=<span class="hljs-number">0</span>;<br>    cin &gt;&gt; num;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">2</span>;i&lt;=num;i++)&#123;<br>        <span class="hljs-keyword">while</span>(num%i==<span class="hljs-number">0</span>)&#123;<br>            <span class="hljs-keyword">if</span>(num%(i*i)==<span class="hljs-number">0</span>)&#123;<br>                cnt=<span class="hljs-number">0</span>;<br>                <span class="hljs-keyword">do</span>&#123;<br>                    cnt++;<br>                    num=num/i;<br>                &#125;<span class="hljs-keyword">while</span>(num%i==<span class="hljs-number">0</span>);<br>                <span class="hljs-keyword">if</span>(tmp==<span class="hljs-number">0</span>)cout  &lt;&lt; i &lt;&lt; <span class="hljs-string">&quot;^&quot;</span> &lt;&lt; cnt &lt;&lt; <span class="hljs-string">&quot; &quot;</span>;<br>                <span class="hljs-keyword">else</span> cout &lt;&lt; <span class="hljs-string">&quot;* &quot;</span> &lt;&lt; i &lt;&lt; <span class="hljs-string">&quot;^&quot;</span> &lt;&lt; cnt &lt;&lt; <span class="hljs-string">&quot; &quot;</span>;<br>                tmp=<span class="hljs-number">1</span>;<br>            &#125;<span class="hljs-keyword">else</span>&#123;<br>                <span class="hljs-keyword">if</span>(tmp==<span class="hljs-number">0</span>)&#123;<br>                    cout &lt;&lt; i &lt;&lt; <span class="hljs-string">&quot; &quot;</span> ;<br>                    tmp=<span class="hljs-number">1</span>;<br>                    num=num/i;<br>                &#125;<span class="hljs-keyword">else</span>&#123;<br>                    cout  &lt;&lt; <span class="hljs-string">&quot;* &quot;</span>&lt;&lt; i &lt;&lt; <span class="hljs-string">&quot; &quot;</span> ;<br>                    num=num/i;<br>                &#125;<br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
       </section>
 
       
       
+        <nav class="article-nav">
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+      <div class="card-cover" background-image-lazy data-img="https://i.imgur.com/nn3Zo.jpg"></div>
+    
+    <div class="card-text">
+      
+        <a href="/2021/09/08/81/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">81</h2>
+        </a>
+      
+      <div class="card-text--row">Newer</div>
+    </div>
+  </article>
+</div>
+          
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+      <div class="card-cover" background-image-lazy data-img="https://scontent.ftpe7-1.fna.fbcdn.net/v/t1.6435-9/p960x960/240755104_4247552452019549_7837659179061591451_n.jpg?_nc_cat=106&amp;ccb=1-5&amp;_nc_sid=730e14&amp;_nc_ohc=p1E6KnA7Uq0AX_71btC&amp;_nc_ht=scontent.ftpe7-1.fna&amp;oh=81b30098d2de6968427bb03e7bf6e44c&amp;oe=615931B2"></div>
+    
+    <div class="card-text">
+      
+        <a href="/2021/09/07/%E8%A7%A3%E7%A2%BC%E5%99%A8/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">解碼器</h2>
+        </a>
+      
+      <div class="card-text--row">Older</div>
+    </div>
+  </article>
+</div>
+          
+        </nav>
+      
 
-      
-      
+      <section class="page-message-container layout-padding">
+        
+
+
+  
+  
+
+  
+  
+
+
+      </section>
     </div>
     <div class="widget-info">
       <section class="widget-author widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
@@ -162,6 +229,8 @@
     </div>
   </div>
 </section>
+
+      
 
       
 
@@ -225,7 +294,6 @@
     </div>
   </article>
 </div>
-
 
     <!-- footer container -->
 <footer id="footer" class="footer">

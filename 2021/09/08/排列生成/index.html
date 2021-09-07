@@ -22,7 +22,7 @@
 
   
 
-  <title>about | Code Note</title>
+  <title>排列生成 | Code Note</title>
 
   
 
@@ -45,9 +45,9 @@
   <div class="root-container">
     
 <!-- header container -->
-<header class="header-container">
+<header class="header-container post">
   
-    <div class="post-image" style="background-image: url(https://images4.alphacoders.com/641/641968.jpg)"></div>
+    <div class="post-image" style="background-image: url(https://scontent.ftpe7-1.fna.fbcdn.net/v/t1.6435-9/p960x960/240755104_4247552452019549_7837659179061591451_n.jpg?_nc_cat=106&amp;ccb=1-5&amp;_nc_sid=730e14&amp;_nc_ohc=p1E6KnA7Uq0AX_71btC&amp;_nc_ht=scontent.ftpe7-1.fna&amp;oh=81b30098d2de6968427bb03e7bf6e44c&amp;oe=615931B2)"></div>
   
 
   <!-- navbar -->
@@ -95,37 +95,86 @@
 
   
   
-
-  
-  
     <div class="header-content">
-      <div class="post-text layout-block layout-padding">
-        <h1 class="title-wrap">about</h1>
-        
+      <div class="post-text layout-block">
+        <div class="layout-margin">
+          <h1 class="title-wrap">排列生成</h1>
+          <h2 class="title-sub-wrap">
+            <strong>seanchou</strong>
+            <span>发布于</span>
+            <time  class="article-date" datetime="2021-09-07T16:11:00.000Z" itemprop="datePublished">2021-09-08</time>
+          </h2>
+          <ul class="wrap-list dark">
+  
+    <li><a href="/categories/ZeroJudge/">📒 ZeroJudge</a></li>
+  
+</ul>
+          <ul class="wrap-list dark">
+  
+    <li><a href="/tags/%E6%9E%9A%E8%88%89/">🏷️ 枚舉</a></li>
+  
+</ul>
+        </div>
       </div>
     </div>
+  
+
+  
   
   
 </header>
 
-    <!-- 分页(其他自定义页面) -->
+    <!-- 文章 -->
 
-<!-- 自定义页面 -->
-
+<!-- 文章内容 -->
 <div class="body-container">
   <article class="content-container layout-block post-container">
     <div class="article-info">
       
+      
+      
+      
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <h1 id="關於我"><a href="#關於我" class="headerlink" title="關於我:"></a>關於我:</h1><p>hello world! I’m seanchou</p>
-
+        <h5 id="題目敘述"><a href="#題目敘述" class="headerlink" title="[題目敘述]:"></a><font color=#FFD700>[題目敘述]:</font></h5><p>顧名思義，這題就是要你生出1∼N所有的排列。</p>
+<h5 id="code"><a href="#code" class="headerlink" title="code:"></a><font color=#008000>code:</font></h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-keyword">int</span> len;<br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">f</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n,vector&lt;<span class="hljs-keyword">int</span>&gt;&amp; p)</span></span>&#123;<br>    <span class="hljs-keyword">if</span>(n==len)&#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">auto</span> num: p)cout &lt;&lt; num &lt;&lt; <span class="hljs-string">&quot; &quot;</span>;<br>        cout &lt;&lt; <span class="hljs-string">&#x27;\n&#x27;</span>;<br>        <span class="hljs-keyword">return</span>;<br>    &#125;<span class="hljs-keyword">else</span>&#123;<br>        <span class="hljs-keyword">for</span>(p[n]=<span class="hljs-number">1</span>;p[n]&lt;=len;p[n]++)&#123;<br>            <span class="hljs-keyword">if</span>(<span class="hljs-built_in">count</span>(p.<span class="hljs-built_in">begin</span>(),p.<span class="hljs-built_in">begin</span>()+n,p[n])!=<span class="hljs-number">0</span>)<span class="hljs-keyword">continue</span>;<br>            <span class="hljs-built_in">f</span>(n+<span class="hljs-number">1</span>,p);<br>        &#125;<br>    &#125;<br>&#125;<br><br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    ios::<span class="hljs-built_in">sync_with_stdio</span>(<span class="hljs-literal">false</span>);cin.<span class="hljs-built_in">tie</span>(<span class="hljs-number">0</span>);<br>    <span class="hljs-keyword">int</span> N;<br>    cin &gt;&gt; N;<br>    len=N;<br>    <span class="hljs-function">vector&lt;<span class="hljs-keyword">int</span>&gt; <span class="hljs-title">v</span><span class="hljs-params">(N)</span></span>;<br>    <span class="hljs-built_in">f</span>(<span class="hljs-number">0</span>,v);<br>&#125;<br></code></pre></td></tr></table></figure>
       </section>
 
       
       
+        <nav class="article-nav">
+          
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+      <div class="card-cover" background-image-lazy data-img="https://i.imgur.com/nn3Zo.jpg"></div>
+    
+    <div class="card-text">
+      
+        <a href="/2021/09/08/81/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">81</h2>
+        </a>
+      
+      <div class="card-text--row">Older</div>
+    </div>
+  </article>
+</div>
+          
+        </nav>
+      
 
-      
-      
+      <section class="page-message-container layout-padding">
+        
+
+
+  
+  
+
+  
+  
+
+
+      </section>
     </div>
     <div class="widget-info">
       <section class="widget-author widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
@@ -162,6 +211,8 @@
     </div>
   </div>
 </section>
+
+      
 
       
 
@@ -225,7 +276,6 @@
     </div>
   </article>
 </div>
-
 
     <!-- footer container -->
 <footer id="footer" class="footer">
