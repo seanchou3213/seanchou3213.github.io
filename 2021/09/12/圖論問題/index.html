@@ -22,7 +22,7 @@
 
   
 
-  <title>81 | Code Note</title>
+  <title>圖論問題 | Code Note</title>
 
   
 
@@ -47,7 +47,7 @@
 <!-- header container -->
 <header class="header-container post">
   
-    <div class="post-image" style="background-image: url(https://i.imgur.com/nn3Zo.jpg)"></div>
+    <div class="post-image" style="background-image: url(https://img.itw01.com/images/2019/12/20/18/2338_KdZMot_89A9CEM.jpg)"></div>
   
 
   <!-- navbar -->
@@ -98,20 +98,20 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">81</h1>
+          <h1 class="title-wrap">圖論問題</h1>
           <h2 class="title-sub-wrap">
             <strong>seanchou</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2021-09-07T16:02:00.000Z" itemprop="datePublished">2021-09-08</time>
+            <time  class="article-date" datetime="2021-09-12T12:35:00.000Z" itemprop="datePublished">2021-09-12</time>
           </h2>
           <ul class="wrap-list dark">
   
-    <li><a href="/categories/AtCoder/">📒 AtCoder</a></li>
+    <li><a href="/categories/AA/">📒 AA</a></li>
   
 </ul>
           <ul class="wrap-list dark">
   
-    <li><a href="/tags/%E6%9E%9A%E8%88%89/">🏷️ 枚舉</a></li>
+    <li><a href="/tags/%E5%9C%96%E8%AB%96/">🏷️ 圖論</a></li>
   
 </ul>
         </div>
@@ -135,41 +135,35 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <h5 id="題目敘述"><a href="#題目敘述" class="headerlink" title="[題目敘述]:"></a><font color=#FFD700>[題目敘述]:</font></h5><p><a target="_blank" rel="noopener" href="https://atcoder.jp/contests/abc144/tasks/abc144_b">B - 81</a></p>
-<p>九九乘法表找出N的值</p>
-<h5 id="code"><a href="#code" class="headerlink" title="code:"></a><font color=#008000>code:</font></h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    ios::<span class="hljs-built_in">sync_with_stdio</span>(<span class="hljs-literal">false</span>);cin.<span class="hljs-built_in">tie</span>(<span class="hljs-number">0</span>);<br>    <span class="hljs-keyword">int</span> n;<br>    <span class="hljs-keyword">bool</span> flag=<span class="hljs-literal">false</span>;<br>    cin &gt;&gt; n;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=<span class="hljs-number">1</span>;j&lt;=<span class="hljs-number">9</span>;j++)&#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;=<span class="hljs-number">9</span>;i++)&#123;<br>            <span class="hljs-keyword">if</span>(i*j==n)&#123;<br>                flag=<span class="hljs-literal">true</span>;<br>                <span class="hljs-keyword">break</span>;<br>            &#125;<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">if</span>(flag)&#123;<br>        cout &lt;&lt; <span class="hljs-string">&quot;Yes&quot;</span>;<br>    &#125;<span class="hljs-keyword">else</span>&#123;<br>        cout &lt;&lt; <span class="hljs-string">&quot;No&quot;</span>;<br> <br>    &#125;<br> <br>&#125;<br></code></pre></td></tr></table></figure>
+        <h5 id="題目敘述"><a href="#題目敘述" class="headerlink" title="[題目敘述]:"></a><font color=#FFD700>[題目敘述]:</font></h5><p>給你一個 N 個點 M 條邊的無向圖，點的編號為 1∼N，第 i 條邊連結點 <mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -0.357ex" xmlns="http://www.w3.org/2000/svg" width="2.034ex" height="1.357ex" role="img" focusable="false" viewBox="0 -442 899 599.8" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-3-TEX-I-1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path><path id="MJX-3-TEX-I-1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><use data-c="1D465" xlink:href="#MJX-3-TEX-I-1D465"></use></g><g data-mml-node="mi" transform="translate(605,-150) scale(0.707)"><use data-c="1D456" xlink:href="#MJX-3-TEX-I-1D456"></use></g></g></g></g></svg></mjx-container> 和點 <mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -0.464ex" xmlns="http://www.w3.org/2000/svg" width="1.848ex" height="1.464ex" role="img" focusable="false" viewBox="0 -442 817 647" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-2-TEX-I-1D466" d="M21 287Q21 301 36 335T84 406T158 442Q199 442 224 419T250 355Q248 336 247 334Q247 331 231 288T198 191T182 105Q182 62 196 45T238 27Q261 27 281 38T312 61T339 94Q339 95 344 114T358 173T377 247Q415 397 419 404Q432 431 462 431Q475 431 483 424T494 412T496 403Q496 390 447 193T391 -23Q363 -106 294 -155T156 -205Q111 -205 77 -183T43 -117Q43 -95 50 -80T69 -58T89 -48T106 -45Q150 -45 150 -87Q150 -107 138 -122T115 -142T102 -147L99 -148Q101 -153 118 -160T152 -167H160Q177 -167 186 -165Q219 -156 247 -127T290 -65T313 -9T321 21L315 17Q309 13 296 6T270 -6Q250 -11 231 -11Q185 -11 150 11T104 82Q103 89 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z"></path><path id="MJX-2-TEX-I-1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><use data-c="1D466" xlink:href="#MJX-2-TEX-I-1D466"></use></g><g data-mml-node="mi" transform="translate(523,-150) scale(0.707)"><use data-c="1D456" xlink:href="#MJX-2-TEX-I-1D456"></use></g></g></g></g></svg></mjx-container>，長度為 <mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -0.357ex" xmlns="http://www.w3.org/2000/svg" width="1.414ex" height="1.927ex" role="img" focusable="false" viewBox="0 -694 625 851.8" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-2-TEX-I-1D459" d="M117 59Q117 26 142 26Q179 26 205 131Q211 151 215 152Q217 153 225 153H229Q238 153 241 153T246 151T248 144Q247 138 245 128T234 90T214 43T183 6T137 -11Q101 -11 70 11T38 85Q38 97 39 102L104 360Q167 615 167 623Q167 626 166 628T162 632T157 634T149 635T141 636T132 637T122 637Q112 637 109 637T101 638T95 641T94 647Q94 649 96 661Q101 680 107 682T179 688Q194 689 213 690T243 693T254 694Q266 694 266 686Q266 675 193 386T118 83Q118 81 118 75T117 65V59Z"></path><path id="MJX-2-TEX-I-1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><use data-c="1D459" xlink:href="#MJX-2-TEX-I-1D459"></use></g><g data-mml-node="mi" transform="translate(331,-150) scale(0.707)"><use data-c="1D456" xlink:href="#MJX-2-TEX-I-1D456"></use></g></g></g></g></svg></mjx-container>，並且邊上還有個小寫英文字母 <mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: -0.357ex" xmlns="http://www.w3.org/2000/svg" width="1.719ex" height="1.357ex" role="img" focusable="false" viewBox="0 -442 760 599.8" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-2-TEX-I-1D450" d="M34 159Q34 268 120 355T306 442Q362 442 394 418T427 355Q427 326 408 306T360 285Q341 285 330 295T319 325T330 359T352 380T366 386H367Q367 388 361 392T340 400T306 404Q276 404 249 390Q228 381 206 359Q162 315 142 235T121 119Q121 73 147 50Q169 26 205 26H209Q321 26 394 111Q403 121 406 121Q410 121 419 112T429 98T420 83T391 55T346 25T282 0T202 -11Q127 -11 81 37T34 159Z"></path><path id="MJX-2-TEX-I-1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><use data-c="1D450" xlink:href="#MJX-2-TEX-I-1D450"></use></g><g data-mml-node="mi" transform="translate(466,-150) scale(0.707)"><use data-c="1D456" xlink:href="#MJX-2-TEX-I-1D456"></use></g></g></g></g></svg></mjx-container>。</p>
+<p>我們稱一條路徑所構成的字串為依序把路徑每條邊上的字母接起來的字串。</p>
+<p>對於每個編號大於 1 的點，都請你求出點 1 至該點的最短路，若有很多條路一樣短，請找出所有最短路中，路徑構成的字串字典序最小那個路徑。為了避免輸出的檔案大小太大，對於每個點，只需輸出此路徑的最後一條邊上的字母即可。</p>
+<p>請看範例解釋能幫助你更了解題意。</p>
+<h6 id="範例"><a href="#範例" class="headerlink" title="範例:"></a>範例:</h6><p>輸入:</p>
+<p>4 4</p>
+<p>1 2 1 a</p>
+<p>1 3 1 b</p>
+<p>2 4 1 d</p>
+<p>3 4 1 c</p>
+<p>輸出:</p>
+<p>abd</p>
+<h5 id="code"><a href="#code" class="headerlink" title="code:"></a><font color=#008000>code:</font></h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SZ(X) ((int)(X).size())</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MP make_pair</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> PB push_back</span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> SIZE = <span class="hljs-number">200&#x27;002</span>;<br><span class="hljs-keyword">const</span> <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> INF = <span class="hljs-number">1e18</span>;<br>vector&lt;<span class="hljs-keyword">int</span>&gt; e[SIZE][<span class="hljs-number">26</span>];<br><span class="hljs-keyword">char</span> an[SIZE];<br>vector&lt;<span class="hljs-keyword">int</span>&gt; bfs[SIZE];<br>bitset&lt;SIZE&gt; visited;<br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">solve</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-keyword">int</span> N, M;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d%d&quot;</span>, &amp;N, &amp;M);<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; M; i++) &#123;<br>        <span class="hljs-keyword">int</span> x, y;<br>        <span class="hljs-keyword">char</span> s[<span class="hljs-number">4</span>];<br>        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d%d%*d%s&quot;</span>, &amp;x, &amp;y, s);<br>        e[x][s[<span class="hljs-number">0</span>] - <span class="hljs-string">&#x27;a&#x27;</span>].<span class="hljs-built_in">PB</span>(y);<br>        e[y][s[<span class="hljs-number">0</span>] - <span class="hljs-string">&#x27;a&#x27;</span>].<span class="hljs-built_in">PB</span>(x);<br>    &#125;<br>    bfs[<span class="hljs-number">0</span>].<span class="hljs-built_in">PB</span>(<span class="hljs-number">1</span>);<br>    visited[<span class="hljs-number">1</span>] = <span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> ll = <span class="hljs-number">0</span>, rr = <span class="hljs-number">1</span>; ll &lt; rr; ll++) &#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">26</span>; j++) &#123;<br>            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> x: bfs[ll]) &#123;<br>                <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> y: e[x][j]) &#123;<br>                    <span class="hljs-keyword">if</span>(visited[y]) &#123; <span class="hljs-keyword">continue</span>; &#125;<br>                    bfs[rr].<span class="hljs-built_in">PB</span>(y);<br>                    an[y] = j + <span class="hljs-string">&#x27;a&#x27;</span>;<br>                    visited[y] = <span class="hljs-number">1</span>;<br>                &#125;<br>            &#125;<br>            <span class="hljs-keyword">if</span>(<span class="hljs-built_in">SZ</span>(bfs[rr])) &#123; rr++; &#125;<br>        &#125;<br>    &#125;<br>    <span class="hljs-built_in">puts</span>(an + <span class="hljs-number">2</span>);<br>&#125;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-built_in">solve</span>();<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
       </section>
 
       
       
         <nav class="article-nav">
           
-            <div class="article-nav-item layout-padding">
-  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
-    
-      <div class="card-cover" background-image-lazy data-img="https://scontent.ftpe7-1.fna.fbcdn.net/v/t1.6435-9/p960x960/240755104_4247552452019549_7837659179061591451_n.jpg?_nc_cat=106&amp;ccb=1-5&amp;_nc_sid=730e14&amp;_nc_ohc=p1E6KnA7Uq0AX_71btC&amp;_nc_ht=scontent.ftpe7-1.fna&amp;oh=81b30098d2de6968427bb03e7bf6e44c&amp;oe=615931B2"></div>
-    
-    <div class="card-text">
-      
-        <a href="/2021/09/08/%E6%8E%92%E5%88%97%E7%94%9F%E6%88%90/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">排列生成</h2>
-        </a>
-      
-      <div class="card-text--row">Newer</div>
-    </div>
-  </article>
-</div>
-          
           
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
-      <div class="card-cover" background-image-lazy data-img="https://scontent.ftpe7-1.fna.fbcdn.net/v/t1.6435-9/p960x960/240755104_4247552452019549_7837659179061591451_n.jpg?_nc_cat=106&amp;ccb=1-5&amp;_nc_sid=730e14&amp;_nc_ohc=p1E6KnA7Uq0AX_71btC&amp;_nc_ht=scontent.ftpe7-1.fna&amp;oh=81b30098d2de6968427bb03e7bf6e44c&amp;oe=615931B2"></div>
+      <div class="card-cover" background-image-lazy data-img="https://www.hcedu.org.tw/wp-content/uploads/2021/01/APCS-logo-1.png"></div>
     
     <div class="card-text">
       
-        <a href="/2021/09/07/%E5%9B%A0%E6%95%B8%E5%88%86%E8%A7%A3/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">因數分解</h2>
+        <a href="/2021/09/08/%E9%AD%94%E7%8E%8B%E8%BF%B7%E5%AE%AE/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">魔王迷宮</h2>
         </a>
       
       <div class="card-text--row">Older</div>
