@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>A*B*C | code book</title>
+  <title>棍子中點切割 | code book</title>
 
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -617,21 +617,21 @@
 
 
 <div class="post-detail-header" id="thumbnail_canvas" style="background-repeat: no-repeat; background-size: cover; 
-  background-position: center center;position: relative;background-image:url('/medias/13.jpg')">
+  background-position: center center;position: relative;background-image:url('/medias/5.jpg')">
   <div class="post-detail-header-mask"></div>
   <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
   
   <div class="post-detail-header_info-box">
     <div class="title-box">
       <span class="title">
-        A*B*C
+        棍子中點切割
       </span>
     </div>
     
     
       
         <span class="post-detail-header_date">
-          <i class="fas fa-calendar"></i> 發表於：2021-10-30 |
+          <i class="fas fa-calendar"></i> 發表於：2021-11-04 |
         </span>
       
 
@@ -639,8 +639,8 @@
         <span class="post-detail-header_categories">
           <i class="iconfont iconbookmark1"></i> 分類：
           
-            <a href="/categories/AtCoder/" class="post-detail-header_category">
-              AtCoder
+            <a href="/categories/AP325/" class="post-detail-header_category">
+              AP325
             </a>
           
         </span>
@@ -661,18 +661,17 @@
   <div class="main-content">
     <article class="post post-detail">
       <div class="post-content">
-        <h1 id="題目敘述"><a href="#題目敘述" class="headerlink" title="題目敘述"></a>題目敘述</h1><p><a target="_blank" rel="noopener" href="https://atcoder.jp/contests/arc113/tasks/arc113_a">https://atcoder.jp/contests/arc113/tasks/arc113_a</a></p>
-<hr>
-<h1 id="題解"><a href="#題解" class="headerlink" title="題解"></a>題解</h1><p>枚舉i,j，枚舉每組i、j之後除與K去求出k的個數，代表這組ij對於答案的貢獻有幾個。</p>
-<p>枚舉時不用讓j跑滿，只要i*j大於k就可以退出了。</p>
-<h2 id="參考解法"><a href="#參考解法" class="headerlink" title="參考解法"></a>參考解法</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> <span class="keyword">int</span> k,cnt=<span class="number">0</span>;</span><br><span class="line">    cin &gt;&gt; k;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">long</span> <span class="keyword">long</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=k;i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">long</span> <span class="keyword">long</span> <span class="keyword">int</span> j=<span class="number">1</span>;i*j&lt;=k;j++)&#123;</span><br><span class="line">            cnt+=k/(i*j);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; cnt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h1 id="題目敘述"><a href="#題目敘述" class="headerlink" title="題目敘述:"></a>題目敘述:</h1><p><a target="_blank" rel="noopener" href="https://judge.tcirc.tw/ShowProblem?problemid=d003">https://judge.tcirc.tw/ShowProblem?problemid=d003</a></p>
+<h1 id="題解"><a href="#題解" class="headerlink" title="題解"></a>題解</h1><p>$ 成本=p[right]-p[left] $</p>
+<p>15行，尋找中間座標。<br>16行，如果有兩個離中間點最近，就取最小座標。</p>
+<h2 id="參考解法"><a href="#參考解法" class="headerlink" title="參考解法:"></a>參考解法:</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> int long long</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> SIZE=<span class="number">5</span>*<span class="number">1e4</span>+<span class="number">7</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> p[SIZE];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">cut</span><span class="params">(<span class="keyword">int</span> left,<span class="keyword">int</span> right)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(right-left&lt;=<span class="number">1</span>)<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> len=p[right]-p[left];</span><br><span class="line">    <span class="keyword">int</span> m=(p[left]+p[right])/<span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> i=left;</span><br><span class="line">    <span class="keyword">while</span>(p[i]&lt;m)&#123;i++;&#125;;</span><br><span class="line">    <span class="keyword">if</span>(p[i<span class="number">-1</span>]-p[left]&gt;=p[right]-p[i])&#123;</span><br><span class="line">        i--;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> len+<span class="built_in">cut</span>(left,i)+<span class="built_in">cut</span>(i,right);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,l;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; l;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        cin &gt;&gt; p[i];</span><br><span class="line">    &#125;</span><br><span class="line">    p[<span class="number">0</span>]=<span class="number">0</span>;</span><br><span class="line">    p[n+<span class="number">1</span>]=l;</span><br><span class="line">    cout &lt;&lt; <span class="built_in">cut</span>(<span class="number">0</span>,n+<span class="number">1</span>) &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">signed</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="built_in">solve</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
       </div>
       <div class="post-tags-categories">
         
         <div class="tags">
           
-            <a href="/tags/%E6%9E%9A%E8%88%89/" class="">
-              枚舉
+            <a href="/tags/%E9%81%9E%E8%BF%B4/" class="">
+              遞迴
             </a>
           
         </div>
@@ -691,17 +690,17 @@
   <div class="post-nav-prev post-nav-item">
     <div class="post-nav-img" style="background-size: cover; 
       background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="/medias/4.jpg" class="lazyload placeholder" data-srcset="/medias/4.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+      <img class="lazyload lazyload placeholder" src="/medias/7.jpg" class="lazyload placeholder" data-srcset="/medias/7.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
     </div>
-    <a href="/z_post/Counting-Divisors/" class="post-nav-link">
+    <a href="/z_post/%E5%B0%8F%E6%9C%8B%E5%8F%8B%E4%B8%8A%E6%A8%93%E6%A2%AF%E6%9C%80%E5%B0%8F%E6%88%90%E6%9C%AC/" class="post-nav-link">
       <div class="title">
         <i class="fas fa-angle-left"></i> 上壹篇:
-        <div class="title-text">Counting Divisors</div>
+        <div class="title-text">小朋友上樓梯最小成本</div>
       </div>
       
       <!-- <div class="content">
-        題目敘述https://cses.fi/problemset/result/3062914/
-題解利用建表建出$i$的所
+        題目敘述https://judge.tcirc.tw/ShowProblem?problemid=d066
+題解依題目敘
       </div> -->
     </a>
   </div>
@@ -712,17 +711,16 @@
   <div class="post-nav-next post-nav-item">
     <div class="post-nav-img" style="background-size: cover; 
       background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="/medias/7.jpg" class="lazyload placeholder" data-srcset="/medias/7.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" src="" alt="">
+      <img class="lazyload lazyload placeholder" src="/medias/4.jpg" class="lazyload placeholder" data-srcset="/medias/4.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" src="" alt="">
     </div>
-    <a href="/z_post/BIT-%E6%A8%B9%E7%8B%80%E6%95%B8%E7%B5%84/" class="post-nav-link">
+    <a href="/z_post/Counting-Divisors/" class="post-nav-link">
       <div class="title">
         下壹篇: <i class="fas fa-angle-right"></i>
-        <div class="title-text">BIT(樹狀數組)</div>
+        <div class="title-text">Counting Divisors</div>
       </div>
       <!-- <div class="content">
-        觀念 :https://www.youtube.com/watch?v=WbafSgetDDk
-
-模板:12345678
+        題目敘述https://cses.fi/problemset/result/3062914/
+題解利用建表建出$i$的所
       </div> -->
     </a>
   </div>
