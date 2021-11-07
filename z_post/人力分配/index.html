@@ -631,7 +631,7 @@
     
       
         <span class="post-detail-header_date">
-          <i class="fas fa-calendar"></i> 發表於：2021-09-05 |
+          <i class="fas fa-calendar"></i> 發表於：2021-11-06 |
         </span>
       
 
@@ -661,9 +661,11 @@
   <div class="main-content">
     <article class="post post-detail">
       <div class="post-content">
-        <h5 id="題目敘述"><a href="#題目敘述" class="headerlink" title="題目敘述"></a>題目敘述</h5><p><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=f312">https://zerojudge.tw/ShowProblem?problemid=f312</a></p>
-<h5 id="題解"><a href="#題解" class="headerlink" title="題解"></a>題解</h5><p>依照題目的公式解題，並將兩個公式推出來的答案比大小。</p>
-<h5 id="參考程式碼"><a href="#參考程式碼" class="headerlink" title="參考程式碼"></a>參考程式碼</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> A1,A2,B1,B2,C1,C2,n;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Y1</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (A1*x*x)+(B1*x)+C1;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Y2</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (A2*x*x)+(B2*x)+C2;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">int</span> max_num=<span class="number">-30000</span>;</span><br><span class="line">    cin &gt;&gt; A1 &gt;&gt; B1 &gt;&gt; C1 &gt;&gt; A2 &gt;&gt; B2 &gt;&gt; C2 &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        max_num=<span class="built_in">max</span>(max_num,<span class="built_in">Y1</span>(i)+<span class="built_in">Y2</span>(n-i));</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; max_num ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h2 id="題目敘述"><a href="#題目敘述" class="headerlink" title="題目敘述"></a>題目敘述</h2><p><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=f312">https://zerojudge.tw/ShowProblem?problemid=f312</a></p>
+<h2 id="題解"><a href="#題解" class="headerlink" title="題解"></a>題解</h2><p>枚舉工廠1的員工為$i$，工廠二的員工人數就是$n-i$，再將兩個工廠的人數都各自丟進自己工廠的公式並算出收益，最後將兩個收益相加。</p>
+<p>依照每次枚舉所產出的收益去找出最大的答案。</p>
+<h3 id="參考解法"><a href="#參考解法" class="headerlink" title="參考解法"></a>參考解法</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> A1,A2,B1,B2,C1,C2,n;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Y1</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (A1*x*x)+(B1*x)+C1;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Y2</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (A2*x*x)+(B2*x)+C2;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">int</span> max_num=<span class="number">-30000</span>;</span><br><span class="line">    cin &gt;&gt; A1 &gt;&gt; B1 &gt;&gt; C1 &gt;&gt; A2 &gt;&gt; B2 &gt;&gt; C2 &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        max_num=<span class="built_in">max</span>(max_num,<span class="built_in">Y1</span>(i)+<span class="built_in">Y2</span>(n-i));</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; max_num ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       </div>
       <div class="post-tags-categories">
         
@@ -685,40 +687,22 @@
 
 
 
-  
-  <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img" style="background-size: cover; 
-      background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="/medias/7.jpg" class="lazyload placeholder" data-srcset="/medias/7.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
-    </div>
-    <a href="/z_post/%E6%89%BE%E9%87%91%E5%B9%A3/" class="post-nav-link">
-      <div class="title">
-        <i class="fas fa-angle-left"></i> 上壹篇:
-        <div class="title-text">找金幣</div>
-      </div>
-      
-      <!-- <div class="content">
-        題目敘述給你一個正整數 N。有一塊土地，對於所有滿足 1≤x,y≤N 的正整數 $x,y$，座標 (x,y) 埋藏的金幣
-      </div> -->
-    </a>
-  </div>
-
 
 
   
   <div class="post-nav-next post-nav-item">
     <div class="post-nav-img" style="background-size: cover; 
       background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="/medias/11.jpg" class="lazyload placeholder" data-srcset="/medias/11.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" src="" alt="">
+      <img class="lazyload lazyload placeholder" src="/medias/7.jpg" class="lazyload placeholder" data-srcset="/medias/7.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" src="" alt="">
     </div>
-    <a href="/z_post/%E5%85%A9%E5%85%89%E6%B3%95%E5%B8%AB%E5%8D%A0%E5%8D%9C%E8%A1%93/" class="post-nav-link">
+    <a href="/z_post/%E5%B0%8F%E6%9C%8B%E5%8F%8B%E4%B8%8A%E6%A8%93%E6%A2%AF%E6%9C%80%E5%B0%8F%E6%88%90%E6%9C%AC/" class="post-nav-link">
       <div class="title">
         下壹篇: <i class="fas fa-angle-right"></i>
-        <div class="title-text">兩光法師占卜術</div>
+        <div class="title-text">小朋友上樓梯最小成本</div>
       </div>
       <!-- <div class="content">
-        題目敘述https://zerojudge.tw/ShowProblem?problemid=a003
-題解依照題目的敘
+        題目敘述https://judge.tcirc.tw/ShowProblem?problemid=d066
+題解依題目敘
       </div> -->
     </a>
   </div>
