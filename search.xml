@@ -4,6 +4,81 @@
   
     
     <entry>
+      <title>離散化</title>
+      <link href="/z_post/%E9%9B%A2%E6%95%A3%E5%8C%96/"/>
+      <url>/z_post/%E9%9B%A2%E6%95%A3%E5%8C%96/</url>
+      
+        <content type="html"><![CDATA[<h1 id="介紹"><a href="#介紹" class="headerlink" title="介紹"></a>介紹</h1><p>待補</p><hr><h1 id="實作"><a href="#實作" class="headerlink" title="實作"></a>實作</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">int</span> a[<span class="number">1000005</span>],t[<span class="number">1000005</span>];</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">int</span> n,k;</span><br><span class="line">    cin &gt;&gt; k;</span><br><span class="line">    <span class="keyword">while</span>(k--)&#123;</span><br><span class="line">        cin &gt;&gt; n;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">            cin &gt;&gt; a[i];</span><br><span class="line">            t[i]=a[i];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//離散化開始</span></span><br><span class="line">        <span class="built_in">sort</span>(t+<span class="number">1</span>,t+n+<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">int</span> m=<span class="built_in">unique</span>(t+<span class="number">1</span>,t+n+<span class="number">1</span>)-t<span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">            a[i]=<span class="built_in">lower_bound</span>(t+<span class="number">1</span>,t+m+<span class="number">1</span>,a[i])-t;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//離散化結束</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">            cout &lt;&lt; a[i] &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 競程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 模板 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>BIT_樹狀數組</title>
+      <link href="/z_post/BIT-%E6%A8%B9%E7%8B%80%E6%95%B8%E7%B5%84/"/>
+      <url>/z_post/BIT-%E6%A8%B9%E7%8B%80%E6%95%B8%E7%B5%84/</url>
+      
+        <content type="html"><![CDATA[<h1 id="介紹"><a href="#介紹" class="headerlink" title="介紹"></a>介紹</h1><p>待補</p><h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">BIT</span>&#123;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//宣告</span></span><br><span class="line">    vector&lt;ll&gt; tree; </span><br><span class="line">    <span class="keyword">int</span> _n; <span class="comment">//初始化用</span></span><br><span class="line">    <span class="keyword">int</span> bit_num; <span class="comment">// 初始化用</span></span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">lowbit</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> x&amp;(-x);</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">    <span class="built_in">BIT</span>(<span class="keyword">int</span> n) &#123;</span><br><span class="line">        bit_num = __lg(n) + <span class="number">1</span>;</span><br><span class="line">        _n = (<span class="number">1</span> &lt;&lt; bit_num) - <span class="number">1</span>;</span><br><span class="line">        tree.<span class="built_in">assign</span>(_n + <span class="number">1</span>, <span class="number">0</span>); </span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">(<span class="keyword">int</span> i,ll data)</span></span>&#123; </span><br><span class="line">        <span class="keyword">while</span>(i&lt;=_n)&#123;</span><br><span class="line">            tree[i]+=data;</span><br><span class="line">            i+=<span class="built_in">lowbit</span>(i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">query</span><span class="params">(<span class="keyword">int</span> i)</span></span>&#123; </span><br><span class="line">        <span class="keyword">int</span> re=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(i)&#123;</span><br><span class="line">            re+=tree[i];</span><br><span class="line">            i-=<span class="built_in">lowbit</span>(i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> re;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">k_th</span><span class="params">(<span class="keyword">int</span> k)</span></span>&#123;  <span class="comment">// 找第k大</span></span><br><span class="line">        <span class="keyword">int</span> now=<span class="number">0</span>; </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=bit_num<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--) &#123;</span><br><span class="line">            <span class="keyword">if</span>(tree[now+(<span class="number">1</span> &lt;&lt; i)]&lt;k) &#123;</span><br><span class="line">                k-=tree[now+(<span class="number">1</span> &lt;&lt; i)];</span><br><span class="line">                now+= (<span class="number">1</span> &lt;&lt; i);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> now+<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 競程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 模板 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Disjoint_set</title>
+      <link href="/z_post/Disjoint-set/"/>
+      <url>/z_post/Disjoint-set/</url>
+      
+        <content type="html"><![CDATA[<h1 id="介紹"><a href="#介紹" class="headerlink" title="介紹"></a>介紹</h1><p>也稱為稱為並查集<br>• Disjoint-Set 是指能維護n 個物品中，哪些物品是同一種類的<br>東西的資料結構<br>• 常見的實作方法是：用一個有根樹來維護同一種類的物品(每個<br>樹稱為是一個group)</p><ol><li>要詢問兩個物品是否同一類時，找到各自的樹根看看是不是同一個東<br>西即可。(找一個點的樹根的操作被稱為find)</li><li>要把兩個物品設為同一類時，也是找到各自的樹根後，把其中一個樹<br>根指向另一個樹根即可。(此步驟被稱為union)</li></ol><h1 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Disjoint_set</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> d[MAXNUM],num[MAXNUM];</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">array_set</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">            d[i]=i;</span><br><span class="line">            num[i]=<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(n!=d[n])&#123;</span><br><span class="line">            <span class="keyword">return</span> d[n]=<span class="built_in">find</span>(d[n]);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> n;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">Union</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;</span><br><span class="line">        x=<span class="built_in">find</span>(x);</span><br><span class="line">        y=<span class="built_in">find</span>(y);</span><br><span class="line">        <span class="keyword">if</span>(x==y)<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span>(num[x]&gt;num[y])<span class="built_in">swap</span>(x,y);</span><br><span class="line">        num[y]+=num[x];</span><br><span class="line">        d[x]=y;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;DS;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 競程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 模板 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>找出因數O(nlogn+x)方法</title>
       <link href="/z_post/%E6%89%BE%E5%87%BA%E5%9B%A0%E6%95%B8nlogn-x%E6%96%B9%E6%B3%95/"/>
       <url>/z_post/%E6%89%BE%E5%87%BA%E5%9B%A0%E6%95%B8nlogn-x%E6%96%B9%E6%B3%95/</url>
