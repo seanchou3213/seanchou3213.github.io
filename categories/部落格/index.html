@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>標簽 | code book</title>
+  <title>分類: 部落格 | code book</title>
 
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -507,21 +507,22 @@
     <div id="safearea">
       <main class="main" id="pjax-container" style="margin-top: 0;">
         
-<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
-<div class="bg-light-floor-tags" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -3;"></div>
 
-<div class="tags-header" style="background-image:url('https://pic2.zhimg.com/80/v2-bf6c555e7c61a57ba4a1fd95a9a32975_1440w.jpg')">
-    <div class="tags-header-title">
-        tags
-    </div>
-    <div class="tags-header-desc">
+<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
+<div class="bg-light-floor-categoryDetail" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -3;"></div>
+
+<div class="category-header"  style="background-image:url('https://pic3.zhimg.com/80/v2-98dcd81cb0d1fee52a807c13cedb8338_1440w.jpg?source=1940ef5c')">
+  <div class="category-header-title">
+    category
+  </div>
+  <div class="category-header-desc">
     
-        <span class="title" id="tags-header-desc"></span>
-        <script>
+      <span class="title" id="category-header-desc"></span>
+      <script>
   function typedFn() {
-    const el = '#tags-header-desc';
-    const type = 'tag';
-    let desc = '這是標籤'
+    const el = '#category-header-desc';
+    const type = 'categoryDetail';
+    let desc = '你選擇的分類'
     var typed = new Typed(el, {
       strings: [desc],
       startDelay: 100,
@@ -533,71 +534,90 @@
   }
   typedFn();
 </script>
-    
-    </div>
-    <div class="mask-box"></div>
+      
+  </div>
+  <div class="mask-box"></div>
 </div>
 
 
-<div id="tags" class="container">
-    <div class="card">
-        <div class="card-content">
-            <div class="tag-title center-align">
-                <i class="fas fa-tags"></i>&nbsp;&nbsp;文章標簽
+<div class="category">
+  <div class="category-name">
+    <div class="name" style="background-color: #82E0AA;">部落格 分類</div>
+  </div>
+  <!-- 每一篇文章卡片 -->
+  <!-- hash算法 -->
+
+<section class="posts">
+  
+    
+    <article class="post reveal" style="flex-direction: row-reverse;   ">
+      <div class="post-main">
+        <div class="post-info">
+          <div class="post-time">
+            <i class="fas fa-clock" aria-hidden="true"></i>
+            <span class="post-time">2021-10-17</span>
+          </div>
+          <div class="post-title">
+            <a class="post-title-link" href="/z_post/%E5%88%A9%E7%94%A8Hexo-%E5%89%B5%E5%BB%BAGithub-Pages/">利用Hexo+Github Pages創建部落格</a>
+          </div>
+          <div class="post-meta">
+            <div class="post-tags">
+              <!-- 文章详情页的标签 -->
+
+    <i class="iconfont icontag"></i>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
+
             </div>
-            <div class="tag-chips">
-                
-                
-                <a href="/tags/%E6%A8%A1%E6%9D%BF/" title="模板: 3">
-                    <span class="tag-content"
-                        title="模板" style="background-color: #85C1E9;">模板
-                        <span class="tag-length">3</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/HTML/" title="HTML: 1">
-                    <span class="tag-content"
-                        title="HTML" style="background-color: #FEF9E7;">HTML
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/database/" title="database: 1">
-                    <span class="tag-content"
-                        title="database" style="background-color: #F8F9F9;">database
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Hexo/" title="Hexo: 1">
-                    <span class="tag-content"
-                        title="Hexo" style="background-color: #E8F8F5;">Hexo
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E8%A7%A3%E9%A1%8C%E6%8A%80%E5%B7%A7/" title="解題技巧: 1">
-                    <span class="tag-content"
-                        title="解題技巧" style="background-color: #F9EBEA;">解題技巧
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E9%9B%BB%E8%85%A6%E8%88%87%E8%BB%9F%E9%AB%94%E6%87%89%E7%94%A8%E4%B8%99%E7%B4%9A/" title="電腦與軟體應用丙級: 1">
-                    <span class="tag-content"
-                        title="電腦與軟體應用丙級" style="background-color: #82E0AA;">電腦與軟體應用丙級
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
+            <div class="post-categories">
+              <!-- 文章详情页的分类 -->
+
+<div class="article-category">
+  <i class="iconfont iconbookmark1"></i>
+  <a class="article-category-link" href="/categories/%E9%83%A8%E8%90%BD%E6%A0%BC/">部落格</a>
+</div>
+
+
             </div>
+          </div>
+          <div class="post-img-mobile">
+            <a href="/z_post/%E5%88%A9%E7%94%A8Hexo-%E5%89%B5%E5%BB%BAGithub-Pages/" style="background-size: cover; 
+              background-position: center center;">
+              <img class="lazyload lazyload placeholder" src="/medias/11.jpg" class="lazyload placeholder" data-srcset="/medias/11.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+            </a>
+          </div>
+          <div class="post-content">
+            前置作業
+創建github帳號 :
+網址:https://github.com/
+
+
+創建gtihub pages: 
+
+建立一個新的 repository
+
+
+
+將Repository name設為 : 用戶名.github.io ， 然
+          </div>
         </div>
-    </div>
+        <div class="post-more">
+          <a href="/z_post/%E5%88%A9%E7%94%A8Hexo-%E5%89%B5%E5%BB%BAGithub-Pages/">
+            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
+          </a>
+        </div>
+      </div>
+      <div class="post-img">
+        <a href="/z_post/%E5%88%A9%E7%94%A8Hexo-%E5%89%B5%E5%BB%BAGithub-Pages/" style="background-size: cover; 
+          background-position: center center;">
+          <img class="lazyload lazyload placeholder" src="/medias/11.jpg" class="lazyload placeholder" data-srcset="/medias/11.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+        </a>
+      </div>
+    </article>
+  
+</section>
+</div>
+<div class="w-70">
+  
 </div>
 
       </main>

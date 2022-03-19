@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>標簽 | code book</title>
+  <title>電腦軟體應用丙級_筆記 | code book</title>
 
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -507,98 +507,558 @@
     <div id="safearea">
       <main class="main" id="pjax-container" style="margin-top: 0;">
         
-<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
-<div class="bg-light-floor-tags" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -3;"></div>
+ <!-- prismjs 代码高亮 -->
+ 
 
-<div class="tags-header" style="background-image:url('https://pic2.zhimg.com/80/v2-bf6c555e7c61a57ba4a1fd95a9a32975_1440w.jpg')">
-    <div class="tags-header-title">
-        tags
+
+<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -1;"></div>
+
+<!-- 文章详情页顶部图片和标题 -->
+
+
+
+
+<div class="post-detail-header" id="thumbnail_canvas" style="background-repeat: no-repeat; background-size: cover; 
+  background-position: center center;position: relative;background-image:url('/medias/14.jpg')">
+  <div class="post-detail-header-mask"></div>
+  <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
+  
+  <div class="post-detail-header_info-box">
+    <div class="title-box">
+      <span class="title">
+        電腦軟體應用丙級_筆記
+      </span>
     </div>
-    <div class="tags-header-desc">
     
-        <span class="title" id="tags-header-desc"></span>
-        <script>
-  function typedFn() {
-    const el = '#tags-header-desc';
-    const type = 'tag';
-    let desc = '這是標籤'
-    var typed = new Typed(el, {
-      strings: [desc],
-      startDelay: 100,
-      typeSpeed: 100,
-      loop: true,
-      backSpeed: 50,
-      showCursor: true
-    });
-  }
-  typedFn();
-</script>
     
-    </div>
-    <div class="mask-box"></div>
+      
+        <span class="post-detail-header_date">
+          <i class="fas fa-calendar"></i> 發表於：2022-03-18 |
+        </span>
+      
+
+      
+        <span class="post-detail-header_categories">
+          <i class="iconfont iconbookmark1"></i> 分類：
+          
+            <a href="/categories/%E8%AD%89%E7%85%A7/" class="post-detail-header_category">
+              證照
+            </a>
+          
+        </span>
+      
+
+      
+    
+  </div>
+  
+  
+    <script src="/js/bubble/bubble.js"></script>
+  
 </div>
 
 
-<div id="tags" class="container">
-    <div class="card">
-        <div class="card-content">
-            <div class="tag-title center-align">
-                <i class="fas fa-tags"></i>&nbsp;&nbsp;文章標簽
-            </div>
-            <div class="tag-chips">
-                
-                
-                <a href="/tags/%E6%A8%A1%E6%9D%BF/" title="模板: 3">
-                    <span class="tag-content"
-                        title="模板" style="background-color: #85C1E9;">模板
-                        <span class="tag-length">3</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/HTML/" title="HTML: 1">
-                    <span class="tag-content"
-                        title="HTML" style="background-color: #FEF9E7;">HTML
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/database/" title="database: 1">
-                    <span class="tag-content"
-                        title="database" style="background-color: #F8F9F9;">database
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Hexo/" title="Hexo: 1">
-                    <span class="tag-content"
-                        title="Hexo" style="background-color: #E8F8F5;">Hexo
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E8%A7%A3%E9%A1%8C%E6%8A%80%E5%B7%A7/" title="解題技巧: 1">
-                    <span class="tag-content"
-                        title="解題技巧" style="background-color: #F9EBEA;">解題技巧
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E9%9B%BB%E8%85%A6%E8%88%87%E8%BB%9F%E9%AB%94%E6%87%89%E7%94%A8%E4%B8%99%E7%B4%9A/" title="電腦與軟體應用丙級: 1">
-                    <span class="tag-content"
-                        title="電腦與軟體應用丙級" style="background-color: #82E0AA;">電腦與軟體應用丙級
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-            </div>
+
+<div class="row justify-position">
+  <div class="main-content">
+    <article class="post post-detail">
+      <div class="post-content">
+        <p><font color=#FF000>紅色標記</font>代表出現在題目的答案。</p>
+<h1 id="筆試"><a href="#筆試" class="headerlink" title="筆試"></a>筆試</h1><h2 id="第一章電腦概論"><a href="#第一章電腦概論" class="headerlink" title="第一章電腦概論"></a>第一章電腦概論</h2><p>維讀記憶體(ROM)，只能<font color=#FF000>讀取，不能讀出</font>。</p>
+<p>ROM被儲存在一個非揮發性晶片上，也就是說，即使在<font color=#FF000>關機之後記憶的內容仍可以被儲存</font>，所以這種記憶體多用來儲存特定功能的程式，如韌體。ROM儲存用來啟動電腦的程式<font color=#FF000>（如BIOS）</font></p>
+<p><br></br><br>RAM 是揮發性記憶體，代表資訊僅暫時儲存於模組內，並會在重新開機或關機後清除。由於資訊以電力儲存於電晶體內，當電流中斷後，資料隨即消失。每次您發出要求時，它就會透過電腦的儲存磁碟或網路，來擷取所需的檔案或資訊。由於資料儲存在 RAM 中，故每次您在程式或網頁間切換時，資料為立即可用狀態。電腦關機後，將清空記憶體直到程序再次啟動。揮發性記憶體可由使用者輕鬆進行更換、升級、或擴充。</p>
+<p><br></br><br><font color=#FF000>可程式唯讀記憶體（Programmable ROM，PROM）</font>其內部有行列式的鎔絲，可依使用者（廠商）的需要，利用電流將其燒斷，以寫入所需的資料及程式，鎔絲一經燒斷便無法再恢復，亦即資料無法再更改。</p>
+<p>EEPROM<br>電子抹除式可複寫唯讀記憶體（Electrically Erasable Programmable Read Only Memory，EEPROM）之運作原理類似EPROM，但是抹除的方式是使用<font color=#FF000>高電場(紫外線光)</font>來完成，因此不需要透明窗。</p>
+<hr>
+<p>輸出設備和輸入設備合稱為電腦的週邊設備(peripheral equipment)，大致分為：輸入設備、輸出設備及輸入/輸出設備三種</p>
+<p><font color=#FF000>輸入媒體</font>:二維碼、金融卡</p>
+<p>輸出媒體:用來記錄計算機輸出的媒體，例如紙張、紙帶、磁帶、磁碟等。</p>
+<hr>
+<p>資料傳輸速度單位 : <font color=#FF000>BPS</font></p>
+<hr>
+<p>CPU I/O負責<font color=#FF000>輸入輸出</font>，ALU負責<font color=#FF000>算術運算與邏輯運算</font>。</p>
+<br>
+</br>
+
+<p><font color=#FF000>控制單元（Control Unit）</font>，有時為CPU一部分，有時安裝於CPU外部，負責指揮CPU工作。通過該裝置的運行來<font color=#FF000>控制其他裝置的活動</font>，也被視作有限狀態自動機的一種。</p>
+<p>CPU的控制單元曾經只被當成暫時性的通路，其設計十分困難。 目前的控制單元多採用被包含於儲存控制器的微程式加工製造。工作時由微型定序器選定微程式代碼，其各位元組即負責控制計算機的各個部分。諸如暫存器，算術邏輯單元，指令暫存器，總線，甚至晶片外部的輸入輸出均在其掌控之中。在當前的計算機中，各子系統分別擁有隸屬於控制單元的控制器，由這些控制器監督各子系統工作，負責從主記憶體讀取並解釋指令。</p>
+<br>
+</br>
+
+<p>CPU有20條位址線，記憶體空間為<font color=#FF000>1MB</font></p>
+<p><font color=#FF000>2^20 = 1MB</font></p>
+<p>CPU之處理速度的衡量單位微 <font color=#FF000>MIPS</font></p>
+<p>CPU執行一個指令的過程為<font color=#FF000>機器週期</font></p>
+<p>CPU執行速度表示為<font color=#FF000>GHz</font></p>
+<p>CPU 64位元代表<font color=#FF000>CPU的字組長度</font></p>
+<hr>
+<p>1 Byte = 8 Bits</p>
+<p>1 Kilobyte (KB) = 1024 Bytes</p>
+<p>1 Megabyte (MB) = 1024 KB</p>
+<p>1 Gigabyte (GB) = 1024 MB</p>
+<p>1 Terabyte (TB) = 1024 GB</p>
+<p>1 Petabyte (PB) = 1024 TB</p>
+<p>1 Exabyte (EB) = 1024 PB</p>
+<p>1 Zettabyte (ZB) = 1024 EB</p>
+<p>1 Yottabyte (YB) = 1024 ZB</p>
+<p><font color=#FF000>1258291 Bytes 約為 1.2MB</font></p>
+<hr>
+<p>查閱儲存在電腦縮影膠片的資料，需要用到<font color=#FF000>放大顯示閱讀機(Magnifying Display Viewer)</font>。</p>
+<hr>
+<p>雙工（duplex）， 指二台通訊裝置之間，允許有雙向的資料傳輸，可細分為半雙工和全雙工。</p>
+<p><font color=#FF000>半雙工無法雙向傳輸</font>，無線對講機就是使用半雙工系統。</p>
+<p>一般的電話、手機就是全雙工的系統，因為在講話時同時也可以聽到對方的聲音。</p>
+<p>單工:計算機和印表機之間的通信是單工模式，因為只有計算機向印表機傳輸數據，而沒有相反方向的數據傳輸。還有在某些通信信道中，如單工無線發送等。</p>
+<hr>
+<p><font color=#FF000>seednet 不屬於區域網路的標準</font>。</p>
+<p>區域網路的標準 : 乙太網（Ethernet）、令牌環（Token Ring）、令牌匯流排(Token Bus)以及作為這三種網的骨幹網光纖分布數據接口（FDDI），</p>
+<p>ARCNET是一種安裝廣泛的區域網路（LAN）技術，可採用同軸電纜或光纜線。ARCNET為4項主要的LAN技術之一，其他三項為Ethernet，token ring和FDDI。</p>
+<hr>
+<p><font color=#FF000>印表機可以連接主機中的LPT1</font></p>
+<p>LPT:並列埠（Parallel Port），又稱平行埠、LPT(Line Printer Terminal)，是電腦上資料以並列方式傳遞的埠，也就是說至少應該有兩條連接線用於傳遞資料。與只使用一根線傳遞資料（這裡沒有包括用於接地、控制等的連接線）的序列埠相比，並列埠在相同的資料傳送速率下，並列埠可以更快地傳輸資料</p>
+<p>插入設備:</p>
+<p>印表機</p>
+<p>Zip Drive</p>
+<p>影像掃描器</p>
+<p>一些早期的音效卡</p>
+<p>一些老式的網路攝影機。</p>
+<p>並列裝置，如EPROM編程器、模擬器。</p>
+<hr>
+<p>郵件上出現! 代表<font color=#FF000>急件</font>郵件</p>
+<hr>
+<p><font color=#FF000>協同處理器(Coprocessor)</font>可以分擔部分CPU的浮點計算工具。</p>
+<hr>
+<p>「CPU 80586」具 64 位元的資料匯流排及 32 位元的位址匯流排，其可定址的最大線性記憶體空間為<font color=#FF000>4GB</font></p>
+<hr>
+<p>Internet 採用<font color=#FF000>TCP/IP</font>通訊協定</p>
+<hr>
+<p>磁帶是採用<font color=#FF000>循序存取</font>的方式存取</p>
+<hr>
+<p>撞擊式印表機是最老牌的列印技術，至今仍在使用中。大的印表機廠商仍持續製造這類產品，並提供技術支援、零件、與維修服務。以成本為考量的話，撞擊式印表機是最好的選擇。最常見的撞擊式印表機有以下三種：<font color=#FF000>點矩陣（dot-matrix）</font>、菊輪式（daisy-wheel）、以及行列式印表機（line printers）。</p>
+<p>評量點矩陣印表機速度單位是 <font color=#FF000>CPS(Character Per Second)</font></p>
+<p>一般高速印表機之印表速度的計量單位為<font color=#FF000>LPS(Line Per Second)</font></p>
+<p>一般雷射印表機之列印速度的計量單位為<font color=#FF000>PPM(Page Per Minute)</font></p>
+<hr>
+<p>磁碟機讀寫頭移到正確磁軌所花的時間稱為<font color=#FF000>找尋時間(Seek Time)</font></p>
+<p>磁碟每一面都由很多同心圓組成，這些同心圓稱為<font color=#FF000>磁軌</font></p>
+<p>磁碟機存取資料時，存取單位為 <font color=#FF000>Sector</font></p>
+<p>在磁碟結構中，讀寫移動一次位置所能處理到的所有磁軌通稱為<font color=#FF000>磁柱</font></p>
+<p><img src="https://dywang.csie.cyut.edu.tw/dywang/linuxSystem/hd.png" class="lazyload placeholder" data-srcset="https://dywang.csie.cyut.edu.tw/dywang/linuxSystem/hd.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg"></p>
+<hr>
+<p><font color=#FF000>同位位元（英語：Parity bit）</font>或核對位元（check bit）是一個表示給定位數的二進位數中1的個數是奇數還是偶數的二進位數。同位位元是最簡單的錯誤檢測碼。</p>
+<hr>
+<p><font color=#FF000>B2C(business to customer)。B2C的B是Business，意思是企業，2則是to的諧音，C是Customer，意思是消費者</font></p>
+<hr>
+<p>電腦終端機的畫面發生上下跳動時，可調整<font color=#FF000>V-HOLD</font>旋轉鈕以使畫面恢復穩定</p>
+<hr>
+<p>資料匯流排（Data Bus）：在CPU與RAM之間<font color=#FF000>來回</font>傳送需要處理或是需要儲存的資料。</p>
+<hr>
+<p>IP位置由四組數字組成，每組<font color=#FF000>0~255</font>的範圍間。</p>
+<p>網際網路IP長度由<font color=#FF000>32</font>位元所組成</p>
+<hr>
+<p>RS-232C使屬於<font color=#FF000>序列式介面</font></p>
+<p>『序列傳輸』，就是『1次傳送1個bit』的傳送方式，就好像一條單線道，假如有80輛車要通過，那麼80輛車要排成一列，一輛一輛的通過，總共要通過80次。</p>
+<p><a target="_blank" rel="noopener" href="https://reurl.cc/QjqWDq">https://reurl.cc/QjqWDq</a></p>
+<hr>
+<p>程式經編譯過後，不會產生<font color=#FF000>可執行模組(Executable Moudule)</font>輸出，</p>
+<hr>
+<p>輔助記憶體</p>
+<p>輔助記憶體又稱外部記憶體。存放在RAM中的資料會因關機而消失，如果在關機之前將RAM中的資料存放於輔助記憶體之中，就可於日後隨時取用。</p>
+<p>常見的輔助記憶體有：<font color=#FF000>磁碟機(軟碟、硬碟)、光碟機、磁光機、快閃記憶體(Flash Memory-以隨身碟為主)等</font>。</p>
+<hr>
+<p>程式計數器的作用為<font color=#FF000>存放下一個要被執行的指令位置</font></p>
+<hr>
+<p>1微秒 = <font color=#FF000>百萬分之一秒</font></p>
+<hr>
+<p>資料處理(Data Processing)的基本作業是 <font color=#FF000>輸入、處理、輸出</font></p>
+<hr>
+<p><font color=#FF000>電腦輔助教學CAI </font></p>
+<hr>
+<p>DVD光碟機是以<font color=#FF000>1350KB/S</font>表示單倍數。</p>
+<hr>
+<p>CD讀取速度 52X = <font color=#FF000>7.6MB/S</font></p>
+<p><img src="https://qph.fs.quoracdn.net/main-qimg-135c85df80997a59a523d6ab0ef623f7-pjlq" class="lazyload placeholder" data-srcset="https://qph.fs.quoracdn.net/main-qimg-135c85df80997a59a523d6ab0ef623f7-pjlq" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg"></p>
+<hr>
+<p>OA : <font color=#FF000>辦公自動化</font></p>
+<hr>
+<p><font color=#FF000>快閃記憶體（英語：flash memory）</font>，是一種電子清除式可程式唯讀記憶體的形式，允許在操作中被多次擦或寫的記憶體。這種科技主要用於一般性資料儲存，以及在電腦與其他數位產品間交換傳輸資料，如記憶卡與隨身碟。快閃記憶體是一種特殊的、以大區塊抹寫的EEPROM。早期的快閃記憶體進行一次抹除，就會清除掉整顆晶片上的資料。</p>
+<p>快閃記憶體的成本遠較可以位元組為單位寫入的EEPROM來的低，也因此成為非揮發性固態儲存最重要也最廣為採納的技術。像是PDA、固態硬碟、筆記型電腦、數位隨身聽、數位相機與手機上均可見到快閃記憶體。此外，快閃記憶體在遊戲主機上的採用也已經普及，藉以取代儲存遊戲資料用的EEPROM或帶有電池的SRAM。</p>
+<hr>
+<p><font color=#FF000>雙絞線（英語：Twisted pair）</font>是由兩條外面被覆塑膠類絕緣材料、內<br>含銅纜線，互相絕緣的雙線互相纏繞（一般以順時針纏繞），絞合成螺旋狀的一種電纜線。雙絞線可減少傳送中訊號的衰減、減少串擾（英語：crosstalk）及雜訊（英語：Noise）、並改善了對外部電磁干擾的抑制能力。(ADSL)</p>
+<p><a target="_blank" rel="noopener" href="http://www.cs.nccu.edu.tw/~lien/Class/NII/NII97/1/adsl1.htm">http://www.cs.nccu.edu.tw/~lien/Class/NII/NII97/1/adsl1.htm</a></p>
+<hr>
+<p>MAC位址以<font color=#FF000>6Bytes</font>表示</p>
+<hr>
+<p><font color=F000>星狀架構</font><br>架構最簡易，可靠度最高架構。網路工作站集中連接於網路集線器，任何一台主機出了問題會自動隔離，不會影響網路其它工作站運作。由於架構簡單，易於維護與管理，是目前使用最多的網路架構。</p>
+<p>網路集線器 (HUB)將網路各個節點連結起來，轉介網路訊號的裝置。市面上常見的 HUB廠排眾多，有提供 4 個埠，8 個埠，12 個埠，16 個埠，24 個埠甚至高達 48 個埠。 所 謂 埠 (port)即為訊號進入或發出點，類似網路協定層中所談的資料存取點(access point)。目前技術已進步到能提供 100-155 mbps 速度之交換式集線器 (switching HUB)。</p>
+<hr>
+<p>ISO提出的OSI架構分為<font color=F000>7層</font></p>
+<p>通訊軟體LINE 屬於ISO規範中OSI架構中的<font color=F000>應用層</font></p>
+<hr>
+<p>當您在 Windows 電腦上設定 TCP/IP 通訊協定時，TCP/IP 設定會需要：</p>
+<p>IP 位址<br>子網路遮罩<br><font color=F000>預設閘道</font></p>
+<hr>
+<p>一張長 2 英吋、寬 1 英吋的照片，若以解析度為 200dpi 的掃瞄器掃瞄進入電腦，該影像的像素為 <font color=F000>80000</font></p>
+<p>x/200＝2</p>
+<p>y/200=1</p>
+<p>x=400,y=200,400x200=80000</p>
+<hr>
+<p>有一份紙本文件經由掃描器轉換影像文件，若要編輯該影像文件的文字部分，需要利用<font color=F000>OCR 光學字元辨識</font>做辨識。</p>
+<hr>
+<p>10BaseT乙太網路，其中10代表頻寬為10Mbps</p>
+<hr>
+<p>EBCDIC碼 <font color=F000>8位元</font></p>
+<p>UTF-16 <font color=F000>16位元</font></p>
+<hr>
+<p>AES <font color=F000>對稱式加密演算法</font></p>
+<hr>
+<p>IPv4 將IP分為<font color=F000>5</font>個等級。</p>
+<p>IPv6 是以<font color=F000>32個16進位</font>表示其位子</p>
+<hr>
+<p><font color=F000>IDE連接埠</font>不支援熱插拔</p>
+<hr>
+<p><font color=F000>Unicode碼</font>可以支援多國語言</p>
+<hr>
+<p><font color=F000>動態隨機存取記憶體</font>存取速度最慢<br><font color=F000>動態隨機存取記憶體</font>需要週期性充電</p>
+<hr>
+<p><font color=F000>5000RPM = 轉一圈需要0.012秒</font></p>
+<hr>
+<p>16倍速的唯讀數位影音光碟機（DVD-ROM 16X），每秒傳輸速度為<font color=F000>21.6 MB</font></p>
+<p>DVD片來講 1X 的意思是以每秒1,385KB燒錄，所以16X就是1385*16=22160 (KB)=21.6(MB)</p>
+<hr>
+<p>HomeRF無線網路規範家庭設備與藍芽在<font color=F000>2.4GHz</font>的頻段上通訊。</p>
+<hr>
+<p>4G傳輸速率可達<font color=F000>100Mbps</font></p>
+<hr>
+<p>PC99 麥克風插孔為<font color=F000>粉紅色</font></p>
+<hr>
+<p><font color=F000>sqoop支援關聯式資料庫與Hadoop之間的資料轉換。</font></p>
+<p>Hadoop的分散式檔案系統會將資料檔案分割後的每個小塊複製成3份副本。</p>
+<hr>
+<p>大數據Big Data 的3Vs中 與資料輸出入速度有關的為<font color=F000>Velocity</font></p>
+<p>大數據Big Data分析中的大量數據指的是<font color=F000>Volume</font></p>
+<hr>
+<p>能夠直觀呈現大數據特點的方式是<font color=F000>可視化分析(Visbility Analysis)</font></p>
+<hr>
+<p><font color=F000>暗資料</font>因為科技限制而忽略的資料</p>
+<hr>
+<p><font color=F000>MongoDB</font> NoSQL(非關連式資料庫)</p>
+<hr>
+<p>ZipBee在媒體存取層與實體層是採用IEE 802.15.4<font color=F000>標準協定</font></p>
+<hr>
+<h2 id="第二章應用軟體"><a href="#第二章應用軟體" class="headerlink" title="第二章應用軟體"></a>第二章應用軟體</h2><p><font color=F000>Nero Express</font>光碟製作軟體</p>
+<hr>
+<p><font color=F000>選取窗格</font>從重疊的浮動圖片，選取整張被其他圖片所覆蓋的圖片。</p>
+<hr>
+<p>word預設<font color=F000>220ppi</font>解析度來壓縮圖片</p>
+<p>word標籤，最近的功能預設能顯示曾經開啟<font color=F000>15</font>個文件數量。</p>
+<p>word製作目錄時，<font color=F000>樣式</font>可以做為資料項目來源。</p>
+<hr>
+<h2 id="第三章系統軟體使用"><a href="#第三章系統軟體使用" class="headerlink" title="第三章系統軟體使用"></a>第三章系統軟體使用</h2><p>目前中文內碼(BIG-5)中，使用兩個位元組，其高位元組十六進位值均大於<font color=F000>80</font></p>
+<p>題目中的高位元組十六進位的高位元組是採用ASCII碼以後的字碼，</p>
+<p>ASCII碼可以排列成一個十進位序號0～127，可以表示128個字元。(資料來源)</p>
+<p>所以128(10) = 80(16)</p>
+<hr>
+<p>在命令提示字元中，無法使用<font color=F000>.sys檔</font></p>
+<hr>
+<p><font color=F000>菊輪式印表機</font>無法列印中文字</p>
+<hr>
+<p><font color=F000>inf</font>副檔名內容包含控制硬體操作的裝置資訊或指令檔。</p>
+<hr>
+<p><font color=F000>Plug &amp; play</font>讓電腦更容易辨識出此硬體資料。</p>
+<hr>
+<p>windows8 沒有提供<font color=F000>NetRom</font>通訊協定</p>
+<hr>
+<p>window8 檔案目錄為<font color=F000>樹狀</font></p>
+<h2 id="第四章資訊安全"><a href="#第四章資訊安全" class="headerlink" title="第四章資訊安全"></a>第四章資訊安全</h2><hr>
+<h1 id="題組"><a href="#題組" class="headerlink" title="題組"></a>題組</h1>
+      </div>
+      <div class="post-tags-categories">
+        
+        <div class="tags">
+          
+            <a href="/tags/%E9%9B%BB%E8%85%A6%E8%88%87%E8%BB%9F%E9%AB%94%E6%87%89%E7%94%A8%E4%B8%99%E7%B4%9A/" class="">
+              電腦與軟體應用丙級
+            </a>
+          
         </div>
+        
+      </div>
+      
+    </article>
+    <!-- 上一篇文章和下一篇文章 -->
+    
+      <!-- 文章详情页的上一页和下一页 -->
+<div class="post-nav">
+
+
+
+
+
+  
+  <div class="post-nav-next post-nav-item">
+    <div class="post-nav-img" style="background-size: cover; 
+      background-position: center center;">
+      <img class="lazyload lazyload placeholder" src="/medias/7.jpg" class="lazyload placeholder" data-srcset="/medias/7.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" src="" alt="">
     </div>
+    <a href="/z_post/FIRST-Database/" class="post-nav-link">
+      <div class="title">
+        下壹篇: <i class="fas fa-angle-right"></i>
+        <div class="title-text">FIRST Database</div>
+      </div>
+      <!-- <div class="content">
+        My SQL學習過程12345678910111213141516171819202122232425262728293
+      </div> -->
+    </a>
+  </div>
+
 </div>
+
+    
+    
+
+    <!-- 打赏 -->
+    
+
+    <!-- 分享 -->
+    
+      <!-- https://github.com/overtrue/share.js -->
+<!-- 文章详情页的分享 -->
+<div class="social-share" data-sites="twitter,facebook" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+
+<script src="/js/shareJs/social-share.min.js"></script>
+</script>
+
+<style>
+  .social-share {
+    margin: 20px 0;
+  }
+</style>
+
+
+    
+    
+    <!-- 评论 -->
+    <!-- 评论 -->
+
+  <div id="myComment">
+    
+      <div id="gitment-container"></div>
+
+    
+  </div>
+
+<!-- comment script in themes\hexo-theme-bamboo\layout\_partial\scripts\index.ejs -->
+
+
+  </div>
+
+  <!-- 目录 -->
+  <!-- 文章详情页右侧目录 -->
+
+  <div class="toc-aside">
+    <div class="toc-main">
+      <div class="toc-aside-title">
+        <i class="fas fa-list-ul" aria-hidden="true"></i><span>本文目錄</span>
+        
+          <div class="toc-open-close">本文目錄</div>
+        
+      </div>
+      <div class="toc-content">
+        <div class="toc"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 手机端目录按钮 -->
+  <div id="toc-mobile-btn">
+    <i class="fas fa-list-ul" aria-hidden="true"></i>
+  </div>
+  <!-- js在scripts目录下的的toc.ejs里面 -->
+  
+
+  <script>
+    function openBtnClickFn () {
+      let openOrCloseBtn = $('.toc-aside .toc-aside-title .toc-open-close');
+      let open = eval('' || 'true');
+      openOrCloseBtn.click(function() {
+        if (open === true) {
+          $(".toc-aside").css({'width': 0, 'padding': 0});
+          $(".toc-content").css({'width': 0});
+          $(".toc-aside-title span, .toc-aside-title i").css({'display': 'none'});
+          $(".main-content").css({'width': '75%', 'margin': '10px auto'});
+          open = false;
+        } else {
+          $(".toc-aside").css({'width': '300px', 'padding': '0 10px'});
+          $(".toc-content").css({'width': '300px'});
+          $(".toc-aside-title span, .toc-aside-title i").css({'display': 'inline-block'});
+          $(".main-content").css({'width': '65%', 'margin-right': '10px', 'margin-left': 'calc(35% - 350px)'});
+          open = true;
+        }
+      });
+    };
+    openBtnClickFn();
+    document.addEventListener('pjax:complete', function () {
+      openBtnClickFn();
+    })
+    
+  </script>
+
+
+  <!-- 图片放大 Wrap images with fancybox support -->
+  <script src="/js/wrapImage.js"></script>
+</div>
+
+<!-- 文章详情页背景图 -->
+<div id="appBgSwiper" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"
+	:style="{'background-color': bgColor ? bgColor : 'transparent'}">
+	<transition-group tag="ul" :name="names">
+		<li v-for='(image,index) in img' :key='index' v-show="index === mark" class="bg-swiper-box">
+			<img :src="image" class="bg-swiper-img no-lazy">
+		</li>
+	</transition-group>
+</div>
+<script>
+	var vm = new Vue({
+		el: '#appBgSwiper',
+		data: {
+			names: '' || 'fade' || 'fade', // translate-fade fade
+			mark: 0,
+			img: [],
+			bgColor: '',
+			time: null
+		},
+		methods: {   //添加方法
+			change(i, m) {
+				if (i > m) {
+					// this.names = 'fade';
+				} else if (i < m) {
+					// this.names = 'fade';
+				} else {
+					return;
+				}
+				this.mark = i;
+			},
+			prev() {
+				// this.names = 'fade';
+				this.mark--;
+				if (this.mark === -1) {
+					this.mark = 3;
+					return
+				}
+			},
+			next() {
+				// this.names = 'fade';
+				this.mark++;
+				if (this.mark === this.img.length) {
+					this.mark = 0;
+					return
+				}
+			},
+			autoPlay() {
+				// this.names = 'fade';
+				this.mark++;
+				if (this.mark === this.img.length) {
+					this.mark = 0;
+					return
+				}
+			},
+			play() {
+				let bgImgDelay = '' || '180000'
+				let delay = parseInt(bgImgDelay) || 180000;
+				this.time = setInterval(this.autoPlay, delay);
+			},
+			enter() {
+				clearInterval(this.time);
+			},
+			leave() {
+				this.play();
+			}
+		},
+		created() {
+			this.play()
+		},
+		beforeDestroy() {
+			clearInterval(this.time);
+		},
+		mounted() {
+			let prop = '' || '';
+			let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://')
+			if (isImg) {
+				let img = prop.split(',');
+				let configRoot = '/'
+				let arrImg = [];
+				img.forEach(el => {
+					var Expression = /http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/;
+					var objExp = new RegExp(Expression);
+
+					if (objExp.test(el)) {
+						// http or https
+						arrImg.push(el);
+					} else {
+						// 非http or https开头
+						// 本地文件
+						let firstStr = el.charAt(0);
+						if (firstStr == '/') {
+							el = el.substr(1); // 删除第一个字符 '/',因为 configRoot最后一个字符为 /
+						}
+						el = configRoot + el;
+						arrImg.push(el);
+					}
+				})
+				this.img = arrImg;
+			} else {
+				this.bgColor = prop;
+			}
+		}
+	})
+</script>
+
+<style>
+	.bg-swiper-box {
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+
+	.bg-swiper-img {
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+</style>
+
+
+
+
+  <script>
+  function loadMermaid() {
+    if (document.getElementsByClassName('mermaid').length) {
+      if (window.mermaidJsLoad) mermaid.init()
+      else {
+        loadScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(() => {
+          window.mermaidJsLoad = true
+          mermaid.initialize({
+            theme: 'default',
+          })
+          if ('true') {
+            mermaid.init();
+          }
+        })
+      }
+    }
+  };
+  document.addEventListener("DOMContentLoaded", function () {
+    loadMermaid();
+  })
+
+  document.addEventListener('pjax:complete', function () {
+    loadMermaid();
+  })
+  
+</script>
+
 
       </main>
     </div>
