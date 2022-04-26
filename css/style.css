@@ -3306,13 +3306,13 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 }
 .post figure.highlight,
 .post figure.highlight pre {
-  background: #2d2d2d;
+  background: #fff;
   padding: 15px article-padding;
   border-style: solid;
   border-color: color-border;
   border-width: 1px 0;
   overflow: auto;
-  color: #ccc;
+  color: #4d4d4c;
 }
 .post figure.highlight .gutter pre,
 .post figure.highlight .gist .gist-file .gist-data .line-numbers {
@@ -3364,7 +3364,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 }
 .post figure.highlight figcaption {
   font-size: 0.85em;
-  color: #999;
+  color: #8e908c;
   line-height: 1em;
   margin-bottom: 1em;
 }
@@ -3376,13 +3376,13 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   padding-right: 20px;
 }
 .post figure.highlight .line.marked {
-  background: #515151;
+  background: #d6d6d6;
 }
 .post figure.highlight .gist {
   border-style: solid;
   border-color: color-border;
   border-width: 1px 0;
-  background: #2d2d2d;
+  background: #fff;
   padding: 15px article-padding 15px 0;
 }
 .post figure.highlight .gist .gist-file {
@@ -3408,8 +3408,8 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   border: none;
 }
 .post figure.highlight .gist .gist-file .gist-meta {
-  background: #2d2d2d;
-  color: #999;
+  background: #fff;
+  color: #8e908c;
   font: 0.85em font-sans;
   text-shadow: 0 0;
   padding: 0;
@@ -3425,7 +3425,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 }
 .post figure.highlight pre .comment,
 .post figure.highlight pre .title {
-  color: #999;
+  color: #8e908c;
 }
 .post figure.highlight pre .variable,
 .post figure.highlight pre .attribute,
@@ -3439,7 +3439,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 .post figure.highlight pre .css .id,
 .post figure.highlight pre .css .class,
 .post figure.highlight pre .css .pseudo {
-  color: #f2777a;
+  color: #c82829;
 }
 .post figure.highlight pre .number,
 .post figure.highlight pre .preprocessor,
@@ -3447,12 +3447,12 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 .post figure.highlight pre .literal,
 .post figure.highlight pre .params,
 .post figure.highlight pre .constant {
-  color: #f99157;
+  color: #f5871f;
 }
 .post figure.highlight pre .class,
 .post figure.highlight pre .ruby .class .title,
 .post figure.highlight pre .css .rules .attribute {
-  color: #9c9;
+  color: #718c00;
 }
 .post figure.highlight pre .string,
 .post figure.highlight pre .value,
@@ -3460,10 +3460,10 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 .post figure.highlight pre .header,
 .post figure.highlight pre .ruby .symbol,
 .post figure.highlight pre .xml .cdata {
-  color: #9c9;
+  color: #718c00;
 }
 .post figure.highlight pre .css .hexcolor {
-  color: #6cc;
+  color: #3e999f;
 }
 .post figure.highlight pre .function,
 .post figure.highlight pre .python .decorator,
@@ -3473,11 +3473,11 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 .post figure.highlight pre .perl .sub,
 .post figure.highlight pre .javascript .title,
 .post figure.highlight pre .coffeescript .title {
-  color: #69c;
+  color: #4271ae;
 }
 .post figure.highlight pre .keyword,
 .post figure.highlight pre .javascript .function {
-  color: #c9c;
+  color: #8959a8;
 }
 .donate_bar {
   text-align: center;
